@@ -70,21 +70,45 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="128"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="GVI-Pz-MuS" id="kEI-uJ-ZXu"/>
+                                            <outlet property="thumbnailImageView" destination="WAn-4D-dqL" id="b9O-0z-uo7"/>
+                                            <outlet property="titleLabel" destination="bv4-7U-Mt7" id="HIV-3C-ahd"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNH-KO-r1J">
+                                <rect key="frame" x="50" y="802" width="314" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2nP-7r-PJo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="See All">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshButtonTapped:" destination="07K-eu-e7f" eventType="touchUpInside" id="Wn8-FN-vaa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xIF-vf-ToX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="44w-9s-QBI" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" id="Mqt-eT-ZDr"/>
                             <constraint firstItem="44w-9s-QBI" firstAttribute="bottom" secondItem="Ndd-tE-Rzx" secondAttribute="bottom" id="Q8B-HZ-cLU"/>
+                            <constraint firstItem="xIF-vf-ToX" firstAttribute="bottom" secondItem="SNH-KO-r1J" secondAttribute="bottom" id="ZS8-jS-QHG"/>
                             <constraint firstItem="44w-9s-QBI" firstAttribute="top" secondItem="xIF-vf-ToX" secondAttribute="top" id="de6-QH-XhK"/>
                             <constraint firstItem="xIF-vf-ToX" firstAttribute="trailing" secondItem="44w-9s-QBI" secondAttribute="trailing" id="k7B-J0-SyB"/>
+                            <constraint firstItem="SNH-KO-r1J" firstAttribute="centerX" secondItem="xIF-vf-ToX" secondAttribute="centerX" id="rw8-ic-i1w"/>
+                            <constraint firstItem="SNH-KO-r1J" firstAttribute="leading" secondItem="xIF-vf-ToX" secondAttribute="leading" constant="50" id="wFW-kQ-akt"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="44w-9s-QBI" id="8l2-on-xxU"/>
+                        <outlet property="collectionView" destination="44w-9s-QBI" id="kq2-OX-pPp"/>
+                        <outlet property="refreshButton" destination="SNH-KO-r1J" id="T2y-6H-pZk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqZ-hT-Jgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,6 +120,9 @@
         <image name="cloud.heavyrain.fill" catalog="system" width="126" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
