@@ -11,6 +11,8 @@ import Kingfisher
 
 class UserProfileViewController: UIViewController {
     
+    let network = NetworkService(configuration: .default)
+    
     @Published private(set) var user: UserProfile?
     var subscriptions = Set<AnyCancellable>()
     
@@ -70,56 +72,34 @@ class UserProfileViewController: UIViewController {
 extension UserProfileViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let keyword = searchController.searchBar.text
-        print("search: \(keyword)")
+        print("search: \(keyword ?? "")")
     }
 }
 
 extension UserProfileViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("button clicked: \(searchBar.text)")
+        print("button clicked: \(searchBar.text ?? "")")
         
         guard let keyword = searchBar.text,
               !keyword.isEmpty else { return }
         
-        let base = "https://api.github.com/"
-        let path = "users/\(keyword)"
-        let params: [String: String] = [:]
-        let header: [String: String] = ["ContentType": "application/json "]
+        let resource = Resource<UserProfile>(
+            base: "https://api.github.com/",
+            path: "users/\(keyword)",
+            params: [:],
+            header: ["ContentType": "application/json "]
+        )
         
-        var urlComponents = URLComponents(string: base + path)!
-        let queryItmes = params.map { (key: String, value: String) in
-            return URLQueryItem(name: key, value: value)
-        }
-        urlComponents.queryItems = queryItmes
-        
-        var request = URLRequest(url: urlComponents.url!)
-        header.forEach { (key: String, value: String) in
-            request.addValue(value, forHTTPHeaderField: key)
-        }
-        
-        URLSession.shared
-            .dataTaskPublisher(for: request)
-            .tryMap { result -> Data in
-                guard let response = result.response as? HTTPURLResponse,
-                      (200..<300).contains(response.statusCode) else {
-                    let response = result.response as? HTTPURLResponse
-                    let statusCode = response?.statusCode ?? -1
-                    throw NetworkError.responseError(statusCode: statusCode)
-                }
-                return result.data
-            }
-            .decode(type: UserProfile.self, decoder: JSONDecoder())
+        network.load(resource)
             .receive(on: RunLoop.main)
             .sink { completion in
-                print("completion: \(completion)")
                 switch completion {
-                    case .failure:
-                        self.user = nil
-                    case .finished: break
+                case .failure:
+                    self.user = nil
+                case .finished: break
                 }
             } receiveValue: { user in
                 self.user = user
             }.store(in: &subscriptions)
-
     }
 }
