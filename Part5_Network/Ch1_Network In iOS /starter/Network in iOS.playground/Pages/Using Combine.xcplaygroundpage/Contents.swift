@@ -24,8 +24,45 @@ struct GithubProfile: Codable {
     }
 }
 
+final class NetworkService {
+    let session: URLSession
+    
+    init(configuration: URLSessionConfiguration) {
+        session = URLSession(configuration: configuration)
+    }
+    
+    func fetchProfile(username: String) -> AnyPublisher<GithubProfile, Error> {
+        let url = URL(string: "https://api.github.com/users/\(username)")!
+        
+        let publisher = session
+            .dataTaskPublisher(for: url)
+            .tryMap { result -> Data in
+                guard let httpResponse = result.response as? HTTPURLResponse,
+                      (200..<300).contains(httpResponse.statusCode) else {
+                    let response = result.response as? HTTPURLResponse
+                    let statusCode = response?.statusCode ?? -1
+                    throw NetworkError.responseError(statusCode: statusCode)
+                }
+                return result.data
+            }
+            .decode(type: GithubProfile.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+        
+        return publisher
+    }
+}
 
+let networkService = NetworkService(configuration: .default)
 
+let subscription = networkService
+    .fetchProfile(username: "Slothst")
+    .receive(on: RunLoop.main)
+    .print()
+    .sink { completion in
+        print("completion: \(completion)")
+    } receiveValue: { profile in
+        print("Profile: \(profile)")
+    }
 
 
 
