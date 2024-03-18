@@ -20,7 +20,7 @@ struct FrameworkListView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: layout) { 
+                LazyVGrid(columns: layout) {
                     ForEach(list) { item in
                         FrameworkCell(framework: item)
                     }
