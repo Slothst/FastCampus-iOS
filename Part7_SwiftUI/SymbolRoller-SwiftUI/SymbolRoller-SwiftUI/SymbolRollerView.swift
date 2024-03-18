@@ -11,8 +11,45 @@ struct SymbolRollerView: View {
     
     let symbols: [String] = ["sun.min", "moon", "cloud", "wind", "snowflake"]
     
+    @State var imageName: String = "moon"
+    
+    
     var body: some View {
-        Text("Hello Symbol Roller")
+        VStack {
+            Spacer()
+            
+            Image(systemName: imageName)
+                .renderingMode(.template)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+            
+            Spacer()
+            
+            Text(imageName)
+                .font(.system(size: 40, weight: .bold, design: .default))
+            
+            Button {
+                print("Button Tapped")
+                imageName = symbols.randomElement()!
+            } label: {
+                HStack {
+                    Image(systemName: "arrow.3.trianglepath")
+                    VStack {
+                        Text("Reload")
+                            .font(.system(size: 30, weight: .bold, design: .default))
+                        
+                        Text("click me to reload")
+                    }
+                }
+            }
+            .foregroundStyle(.white)
+            .frame(maxWidth: .infinity, minHeight: 80)
+            .background(.pink)
+            .clipShape(Capsule())
+//            .cornerRadius(40)
+        }
+//        Text("Hello Symbol Roller")
     }
 }
 
