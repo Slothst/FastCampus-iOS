@@ -23,8 +23,8 @@ final class DetailViewModel {
     func fetch() {
         
         // simulate network like behavior
-        DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
-            self.itemInfoDetails = ItemInfoDetails()
+        DispatchQueue.global().asyncAfter(deadline: .now() + 0.3) { [unowned self] in
+            self.itemInfoDetails = ItemInfoDetails(user: User.mock, item: self.itemInfo, details: ItemExtraInfo.mock)
         }
         
 //        let resource: Resource<ItemInfoDetails> = Resource(

@@ -154,8 +154,8 @@
 			children = (
 				25CD75102BAAA9A900012F56 /* DetailViewController.swift */,
 				25CD75382BAADA4C00012F56 /* DetailViewModel.swift */,
-				25CD753A2BAADA9000012F56 /* ItemInfoDetails.swift */,
 				25CD75162BAAAAAC00012F56 /* Detail.storyboard */,
+				25CD753A2BAADA9000012F56 /* ItemInfoDetails.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
