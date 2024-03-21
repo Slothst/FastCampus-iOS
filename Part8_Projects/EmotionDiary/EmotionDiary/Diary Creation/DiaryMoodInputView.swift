@@ -44,7 +44,7 @@ struct DiaryMoodInputView: View {
             Spacer()
             
             NavigationLink {
-                DiaryTextInputView()
+                DiaryTextInputView(vm: vm)
             } label: {
                 Text("Next")
                     .frame(width: 200, height: 80)

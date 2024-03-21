@@ -15,6 +15,7 @@ final class DiaryViewModel: ObservableObject {
     
     @Published var date: Date = Date()
     @Published var mood: Mood = .great
+    @Published var text: String = ""
     @Published var isPresented: Binding<Bool>
     
     var subscriptions = Set<AnyCancellable>()
@@ -31,6 +32,11 @@ final class DiaryViewModel: ObservableObject {
             print("---> selected: \(mood)")
             self.update(mood: mood)
         }.store(in: &subscriptions)
+        
+        $text.sink { text in
+            print("---> text: \(text)")
+            self.update(text: text)
+        }.store(in: &subscriptions)
     }
     
     func update(date: Date) {
@@ -41,5 +47,16 @@ final class DiaryViewModel: ObservableObject {
     
     func update(mood: Mood) {
         self.diary.mood = mood
+    }
+    
+    func update(text: String) {
+        self.diary.text = text
+    }
+    
+    func completed() {
+        guard diary.date.isEmpty == false else { return }
+        
+        print("전체 리스트 추가하기")
+        isPresented.wrappedValue = false
     }
 }
