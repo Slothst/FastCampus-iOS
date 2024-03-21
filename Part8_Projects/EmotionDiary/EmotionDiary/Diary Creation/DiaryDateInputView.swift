@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct DiaryDateInputView: View {
+    
+    @StateObject var vm: DiaryViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            DatePicker(
+                "Start Date",
+                selection: $vm.date,
+                displayedComponents: [.date]
+            )
+            .datePickerStyle(.graphical)
+        }
     }
 }
 
 struct DiaryDateInputView_Previews: PreviewProvider {
     static var previews: some View {
-        DiaryDateInputView()
+        let vm = DiaryViewModel(isPresented: .constant(false))
+        DiaryDateInputView(vm: vm)
     }
 }
