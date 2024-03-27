@@ -16,6 +16,7 @@
 		25CBBB1A2BB3E4000059458B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB192BB3E4000059458B /* MyButton.swift */; };
 		25CBBB1C2BB3E4A90059458B /* MyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB1B2BB3E4A90059458B /* MyText.swift */; };
 		25CBBB1E2BB3E6C20059458B /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB1D2BB3E6C20059458B /* Onboarding.swift */; };
+		25CBBB222BB3ED2C0059458B /* ListLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB212BB3ED2C0059458B /* ListLoop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		25CBBB192BB3E4000059458B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		25CBBB1B2BB3E4A90059458B /* MyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyText.swift; sourceTree = "<group>"; };
 		25CBBB1D2BB3E6C20059458B /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		25CBBB212BB3ED2C0059458B /* ListLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLoop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				25CBBB062BB3DF160059458B /* WarmUpApp.swift */,
 				25CBBB082BB3DF160059458B /* ContentView.swift */,
 				25CBBB182BB3E2A00059458B /* 01 */,
+				25CBBB202BB3ED100059458B /* 02 */,
 				25CBBB0A2BB3DF170059458B /* Assets.xcassets */,
 				25CBBB0C2BB3DF170059458B /* Preview Content */,
 			);
@@ -88,6 +91,14 @@
 				25CBBB1D2BB3E6C20059458B /* Onboarding.swift */,
 			);
 			path = 01;
+			sourceTree = "<group>";
+		};
+		25CBBB202BB3ED100059458B /* 02 */ = {
+			isa = PBXGroup;
+			children = (
+				25CBBB212BB3ED2C0059458B /* ListLoop.swift */,
+			);
+			path = 02;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				25CBBB1A2BB3E4000059458B /* MyButton.swift in Sources */,
 				25CBBB152BB3E0D80059458B /* SimpleView.swift in Sources */,
 				25CBBB072BB3DF160059458B /* WarmUpApp.swift in Sources */,
+				25CBBB222BB3ED2C0059458B /* ListLoop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
