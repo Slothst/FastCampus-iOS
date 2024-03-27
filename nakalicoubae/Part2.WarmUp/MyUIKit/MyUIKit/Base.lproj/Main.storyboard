@@ -16,15 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-XZ-oj0">
-                                <rect key="frame" x="130" y="235" width="50" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETO-XZ-oj0">
+                                <rect key="frame" x="171.66666666666666" y="240.66666666666666" width="50" height="25.999999999999972"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIc-8y-qUy">
-                                <rect key="frame" x="159" y="455" width="75" height="35"/>
+                                <rect key="frame" x="16" y="489" width="361" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -32,21 +31,27 @@
                                     <action selector="didMyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfy-Em-PRt"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-fQ-vZc">
-                                <rect key="frame" x="137" y="351" width="118" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EMW-aJ-Jby">
-                                <rect key="frame" x="172" y="301" width="49" height="31"/>
+                                <rect key="frame" x="173" y="602" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hs7-rU-rLm">
-                                <rect key="frame" x="149" y="565" width="94" height="32"/>
+                                <rect key="frame" x="150" y="687" width="94" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stepper>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-fQ-vZc">
+                                <rect key="frame" x="18" y="423.66666666666669" width="357" height="31"/>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VPe-fQ-vZc" firstAttribute="top" secondItem="ETO-XZ-oj0" secondAttribute="bottom" constant="157" id="KxC-0a-h6U"/>
+                            <constraint firstItem="VPe-fQ-vZc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MRb-uV-e1l"/>
+                            <constraint firstItem="VPe-fQ-vZc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RwH-Aa-jhU"/>
+                            <constraint firstAttribute="trailing" secondItem="VPe-fQ-vZc" secondAttribute="trailing" constant="20" id="maK-hi-86u"/>
+                            <constraint firstItem="ETO-XZ-oj0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pgv-1T-RUK"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="myLabel" destination="ETO-XZ-oj0" id="8ka-rD-o79"/>
@@ -54,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
