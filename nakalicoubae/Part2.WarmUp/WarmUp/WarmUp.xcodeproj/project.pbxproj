@@ -20,6 +20,7 @@
 		25CBBB242BB3F35E0059458B /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB232BB3F35E0059458B /* Setting.swift */; };
 		25CBBB272BB426870059458B /* Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB262BB426870059458B /* Modal.swift */; };
 		25CBBB292BB427080059458B /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB282BB427080059458B /* Detail.swift */; };
+		25CBBB2B2BB428160059458B /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB2A2BB428160059458B /* Navigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		25CBBB232BB3F35E0059458B /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		25CBBB262BB426870059458B /* Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modal.swift; sourceTree = "<group>"; };
 		25CBBB282BB427080059458B /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		25CBBB2A2BB428160059458B /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				25CBBB262BB426870059458B /* Modal.swift */,
 				25CBBB282BB427080059458B /* Detail.swift */,
+				25CBBB2A2BB428160059458B /* Navigation.swift */,
 			);
 			path = 03;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				25CBBB1C2BB3E4A90059458B /* MyText.swift in Sources */,
 				25CBBB272BB426870059458B /* Modal.swift in Sources */,
 				25CBBB092BB3DF160059458B /* ContentView.swift in Sources */,
+				25CBBB2B2BB428160059458B /* Navigation.swift in Sources */,
 				25CBBB172BB3E2950059458B /* Layout.swift in Sources */,
 				25CBBB1E2BB3E6C20059458B /* Onboarding.swift in Sources */,
 				25CBBB1A2BB3E4000059458B /* MyButton.swift in Sources */,
