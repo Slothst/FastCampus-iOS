@@ -16,6 +16,10 @@ class MyTableViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .brown
+        configureTableView()
+    }
+    
+    private func configureTableView() {
         myTableView.backgroundColor = .green
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -24,6 +28,10 @@ class MyTableViewController: UIViewController {
 }
 
 extension MyTableViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellData.count
     }
