@@ -14,6 +14,7 @@
 		25CBBB4F2BB4334B0059458B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25CBBB4E2BB4334B0059458B /* Assets.xcassets */; };
 		25CBBB522BB4334B0059458B /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 25CBBB512BB4334B0059458B /* Base */; };
 		25CBBB5A2BB438940059458B /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB592BB438940059458B /* MyViewController.swift */; };
+		25CBBB5C2BB43B5D0059458B /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB5B2BB43B5D0059458B /* MyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		25CBBB512BB4334B0059458B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25CBBB532BB4334B0059458B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25CBBB592BB438940059458B /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		25CBBB5B2BB43B5D0059458B /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				25CBBB472BB433490059458B /* SceneDelegate.swift */,
 				25CBBB492BB433490059458B /* ViewController.swift */,
 				25CBBB592BB438940059458B /* MyViewController.swift */,
+				25CBBB5B2BB43B5D0059458B /* MyTableViewController.swift */,
 				25CBBB4B2BB433490059458B /* Main.storyboard */,
 				25CBBB4E2BB4334B0059458B /* Assets.xcassets */,
 				25CBBB502BB4334B0059458B /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 				25CBBB4A2BB433490059458B /* ViewController.swift in Sources */,
 				25CBBB462BB433490059458B /* AppDelegate.swift in Sources */,
 				25CBBB5A2BB438940059458B /* MyViewController.swift in Sources */,
+				25CBBB5C2BB43B5D0059458B /* MyTableViewController.swift in Sources */,
 				25CBBB482BB433490059458B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
