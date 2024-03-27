@@ -15,6 +15,7 @@
 		25CBBB172BB3E2950059458B /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB162BB3E2950059458B /* Layout.swift */; };
 		25CBBB1A2BB3E4000059458B /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB192BB3E4000059458B /* MyButton.swift */; };
 		25CBBB1C2BB3E4A90059458B /* MyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB1B2BB3E4A90059458B /* MyText.swift */; };
+		25CBBB1E2BB3E6C20059458B /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB1D2BB3E6C20059458B /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		25CBBB162BB3E2950059458B /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		25CBBB192BB3E4000059458B /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
 		25CBBB1B2BB3E4A90059458B /* MyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyText.swift; sourceTree = "<group>"; };
+		25CBBB1D2BB3E6C20059458B /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				25CBBB162BB3E2950059458B /* Layout.swift */,
 				25CBBB1B2BB3E4A90059458B /* MyText.swift */,
 				25CBBB192BB3E4000059458B /* MyButton.swift */,
+				25CBBB1D2BB3E6C20059458B /* Onboarding.swift */,
 			);
 			path = 01;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 				25CBBB1C2BB3E4A90059458B /* MyText.swift in Sources */,
 				25CBBB092BB3DF160059458B /* ContentView.swift in Sources */,
 				25CBBB172BB3E2950059458B /* Layout.swift in Sources */,
+				25CBBB1E2BB3E6C20059458B /* Onboarding.swift in Sources */,
 				25CBBB1A2BB3E4000059458B /* MyButton.swift in Sources */,
 				25CBBB152BB3E0D80059458B /* SimpleView.swift in Sources */,
 				25CBBB072BB3DF160059458B /* WarmUpApp.swift in Sources */,
