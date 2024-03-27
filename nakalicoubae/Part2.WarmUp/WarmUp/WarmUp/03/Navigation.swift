@@ -25,14 +25,15 @@ struct Navigation: View {
                     }
                 }
             }
-            .toolbar(content: {
-                Button {
-                    showModal = true
-                } label: {
-                    Text("add")
+            .toolbar {
+                ToolbarItem(placement: .automatic) {
+                    Button {
+                        showModal = true
+                    } label: {
+                        Text("add")
+                    }
                 }
-
-            })
+            }
             .sheet(isPresented: $showModal, content: {
                 Text("아이템 추가 페이지입니다.")
             })
