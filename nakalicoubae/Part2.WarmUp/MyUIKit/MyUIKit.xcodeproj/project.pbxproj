@@ -16,6 +16,8 @@
 		25CBBB5A2BB438940059458B /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB592BB438940059458B /* MyViewController.swift */; };
 		25CBBB5C2BB43B5D0059458B /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB5B2BB43B5D0059458B /* MyTableViewController.swift */; };
 		25CBBB5E2BB443990059458B /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB5D2BB443990059458B /* TodoViewController.swift */; };
+		25CBBB602BB44AAA0059458B /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB5F2BB44AAA0059458B /* GreenViewController.swift */; };
+		25CBBB622BB44ABF0059458B /* IndigoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBBB612BB44ABF0059458B /* IndigoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		25CBBB592BB438940059458B /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		25CBBB5B2BB43B5D0059458B /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		25CBBB5D2BB443990059458B /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		25CBBB5F2BB44AAA0059458B /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		25CBBB612BB44ABF0059458B /* IndigoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndigoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				25CBBB592BB438940059458B /* MyViewController.swift */,
 				25CBBB5B2BB43B5D0059458B /* MyTableViewController.swift */,
 				25CBBB5D2BB443990059458B /* TodoViewController.swift */,
+				25CBBB5F2BB44AAA0059458B /* GreenViewController.swift */,
+				25CBBB612BB44ABF0059458B /* IndigoViewController.swift */,
 				25CBBB4B2BB433490059458B /* Main.storyboard */,
 				25CBBB4E2BB4334B0059458B /* Assets.xcassets */,
 				25CBBB502BB4334B0059458B /* LaunchScreen.storyboard */,
@@ -153,6 +159,8 @@
 				25CBBB5C2BB43B5D0059458B /* MyTableViewController.swift in Sources */,
 				25CBBB5E2BB443990059458B /* TodoViewController.swift in Sources */,
 				25CBBB482BB433490059458B /* SceneDelegate.swift in Sources */,
+				25CBBB622BB44ABF0059458B /* IndigoViewController.swift in Sources */,
+				25CBBB602BB44AAA0059458B /* GreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
