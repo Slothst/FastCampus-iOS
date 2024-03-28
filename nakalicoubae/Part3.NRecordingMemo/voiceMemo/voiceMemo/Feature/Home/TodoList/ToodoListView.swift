@@ -165,7 +165,6 @@ private struct TodoCellView: View {
                     } label: {
                         isRemoveSelected ? Image("selectedBox") : Image("unSelectedBox")
                     }
-
                 }
             }
         }
