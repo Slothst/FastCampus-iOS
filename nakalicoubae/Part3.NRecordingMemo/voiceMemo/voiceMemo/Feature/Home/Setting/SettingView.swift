@@ -6,6 +6,7 @@
 import SwiftUI
 
 struct SettingView: View {
+    @EnvironmentObject private var homeViewModel: HomeViewModel
     
     var body: some View {
         // 타이틀 뷰
@@ -44,20 +45,22 @@ private struct TitleView: View {
 
 // MARK: - 전체 탭 설정된 카운트 뷰
 private struct TotalTabCountView: View {
+    @EnvironmentObject private var homeViewModel: HomeViewModel
+    
     fileprivate var body: some View {
         // 각각 탭 카운트 뷰 (todolist, memo, voiceMemo)
         HStack {
-            TabCountView(title: "To do", count: 1)
+            TabCountView(title: "To do", count: homeViewModel.todosCount)
             
             Spacer()
                 .frame(width: 70)
             
-            TabCountView(title: "메모", count: 2)
+            TabCountView(title: "메모", count: homeViewModel.memosCount)
             
             Spacer()
                 .frame(width: 70)
             
-            TabCountView(title: "음성메모", count: 3)
+            TabCountView(title: "음성메모", count: homeViewModel.voiceRecordersCount)
         }
     }
 }
@@ -90,6 +93,8 @@ private struct TabCountView: View {
 
 // MARK: - 전체 탭 이동 뷰
 private struct TotalTabMoveView: View {
+    @EnvironmentObject private var homeViewModel: HomeViewModel
+    
     fileprivate var body: some View {
         VStack {
             Rectangle()
@@ -97,19 +102,19 @@ private struct TotalTabMoveView: View {
                 .frame(height: 1)
             
             TabMoveView(title: "To do List") {
-                
+                homeViewModel.changeSelectedTab(.todoList)
             }
             
             TabMoveView(title: "메모장") {
-                
+                homeViewModel.changeSelectedTab(.memo)
             }
             
             TabMoveView(title: "음성메모") {
-                
+                homeViewModel.changeSelectedTab(.voiceRecorder)
             }
             
             TabMoveView(title: "타이머") {
-                
+                homeViewModel.changeSelectedTab(.timer)
             }
             
             Rectangle()
@@ -153,5 +158,6 @@ private struct TabMoveView: View {
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         SettingView()
+            .environmentObject(HomeViewModel())
     }
 }
