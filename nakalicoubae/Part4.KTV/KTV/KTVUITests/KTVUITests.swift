@@ -2,7 +2,7 @@
 //  KTVUITests.swift
 //  KTVUITests
 //
-//  Created by 최낙주 on 3/31/24.
+//  Created by hyeonggyu.kim on 2023/09/06.
 //
 
 import XCTest
