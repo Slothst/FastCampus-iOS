@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,20 +18,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bvx-Pf-0Lj">
-                        <rect key="frame" x="17" y="0.0" width="287" height="444"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="495"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추천" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eI-z6-ZBK">
-                                <rect key="frame" x="14" y="24" width="259" height="22"/>
+                                <rect key="frame" x="14" y="24" width="292" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" name="main-wh"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="odH-EJ-mQa">
-                                <rect key="frame" x="26" y="79" width="235" height="320"/>
+                                <rect key="frame" x="26" y="79" width="268" height="371"/>
                                 <color key="backgroundColor" name="bk-origin"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8j-Ct-plC">
-                                <rect key="frame" x="0.0" y="399" width="287" height="28"/>
+                                <rect key="frame" x="0.0" y="450" width="320" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="pbN-Xe-xhQ"/>
                                 </constraints>
@@ -60,13 +59,12 @@
                 </subviews>
                 <color key="backgroundColor" name="bg"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="bvx-Pf-0Lj" secondAttribute="bottom" constant="51" id="TVi-pm-s4k"/>
+                    <constraint firstAttribute="bottom" secondItem="bvx-Pf-0Lj" secondAttribute="bottom" id="TVi-pm-s4k"/>
                     <constraint firstItem="bvx-Pf-0Lj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hdQ-yP-jQo"/>
-                    <constraint firstItem="bvx-Pf-0Lj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="kzv-jP-8qI"/>
-                    <constraint firstAttribute="trailing" secondItem="bvx-Pf-0Lj" secondAttribute="trailing" constant="16" id="nvU-H3-68E"/>
+                    <constraint firstItem="bvx-Pf-0Lj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kzv-jP-8qI"/>
+                    <constraint firstAttribute="trailing" secondItem="bvx-Pf-0Lj" secondAttribute="trailing" id="nvU-H3-68E"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="bvx-Pf-0Lj" id="2vD-yl-Tnh"/>
                 <outlet property="foldButton" destination="k8j-Ct-plC" id="UCB-QK-C1R"/>

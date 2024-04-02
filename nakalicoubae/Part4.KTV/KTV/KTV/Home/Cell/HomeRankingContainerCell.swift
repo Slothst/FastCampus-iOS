@@ -11,10 +11,10 @@ protocol HomeRankingContainerCellDelegate: AnyObject {
     func homeRankingContainerCell(_ cell: HomeRankingContainerCell, didSelectItemAt index: Int)
 }
 
-class HomeRankingContainerCell: UITableViewCell {
+class HomeRankingContainerCell: UICollectionViewCell {
     
     static let identifier: String = "HomeRankingContainerCell"
-    static let height: CGFloat = 349
+    static let height: CGFloat = 265
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -30,12 +30,6 @@ class HomeRankingContainerCell: UITableViewCell {
         )
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setData(_ data: [Home.Ranking]) {
