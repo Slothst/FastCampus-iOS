@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
             forCellWithReuseIdentifier: HomeVideoCell.identifier
         )
         self.collectionView.register(
-            UINib(nibName: HomeRecommendContainerCell.identifier, bundle: .main),
+            UINib(nibName: "HomeRecommendContainerCell", bundle: .main),
             forCellWithReuseIdentifier: HomeRecommendContainerCell.identifier
         )
         self.collectionView.register(

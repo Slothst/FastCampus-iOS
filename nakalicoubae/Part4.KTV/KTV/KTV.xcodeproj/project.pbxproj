@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2514FB1B2BB9343900D5A09D /* HomeRecommendContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514FB192BB9343900D5A09D /* HomeRecommendContainerCell.swift */; };
 		2514FB1C2BB9343900D5A09D /* HomeRecommendContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2514FB1A2BB9343900D5A09D /* HomeRecommendContainerCell.xib */; };
-		2514FB1F2BB9372E00D5A09D /* HomeRecommendItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514FB1D2BB9372E00D5A09D /* HomeRecommendItemCell.swift */; };
-		2514FB202BB9372E00D5A09D /* HomeRecommendItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2514FB1E2BB9372E00D5A09D /* HomeRecommendItemCell.xib */; };
+		2514FB1F2BB9372E00D5A09D /* VideoListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514FB1D2BB9372E00D5A09D /* VideoListItemCell.swift */; };
+		2514FB202BB9372E00D5A09D /* VideoListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2514FB1E2BB9372E00D5A09D /* VideoListItemCell.xib */; };
 		2514FB232BB93C4000D5A09D /* HomeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514FB212BB93C4000D5A09D /* HomeFooterView.swift */; };
 		2514FB242BB93C4000D5A09D /* HomeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2514FB222BB93C4000D5A09D /* HomeFooterView.xib */; };
 		2514FB2B2BB9502A00D5A09D /* HomeRankingContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2514FB292BB9502A00D5A09D /* HomeRankingContainerCell.swift */; };
@@ -36,6 +36,17 @@
 		25EDA6462BBBEA5C007D97C1 /* HomeRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6452BBBEA5C007D97C1 /* HomeRecommendViewModel.swift */; };
 		25EDA6492BBBFBDA007D97C1 /* HomeRankingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6472BBBFBDA007D97C1 /* HomeRankingHeaderView.swift */; };
 		25EDA64A2BBBFBDA007D97C1 /* HomeRankingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25EDA6482BBBFBDA007D97C1 /* HomeRankingHeaderView.xib */; };
+		25EDA64C2BBC1F7F007D97C1 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA64B2BBC1F7F007D97C1 /* NavigationController.swift */; };
+		25EDA64F2BBC2060007D97C1 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA64E2BBC2060007D97C1 /* MyViewController.swift */; };
+		25EDA6542BBC23F5007D97C1 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6532BBC23F5007D97C1 /* FavoriteViewController.swift */; };
+		25EDA6562BBC23FE007D97C1 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6552BBC23FE007D97C1 /* FavoriteViewModel.swift */; };
+		25EDA6582BBC2409007D97C1 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6572BBC2409007D97C1 /* BookmarkViewController.swift */; };
+		25EDA65A2BBC2410007D97C1 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6592BBC2410007D97C1 /* BookmarkViewModel.swift */; };
+		25EDA65D2BBC242D007D97C1 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA65B2BBC242D007D97C1 /* BookmarkCell.swift */; };
+		25EDA65E2BBC242D007D97C1 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25EDA65C2BBC242D007D97C1 /* BookmarkCell.xib */; };
+		25EDA6602BBC2689007D97C1 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA65F2BBC2689007D97C1 /* Bookmark.swift */; };
+		25EDA6622BBC26C4007D97C1 /* VideoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6612BBC26C4007D97C1 /* VideoListItem.swift */; };
+		25EDA6642BBC26FB007D97C1 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6632BBC26FB007D97C1 /* Favorite.swift */; };
 		68CA313C2AAA292900A744AF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CA313B2AAA292900A744AF /* Color.xcassets */; };
 		95E70C962AA8B93B007BAD7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E70C952AA8B93B007BAD7B /* AppDelegate.swift */; };
 		95E70C982AA8B93B007BAD7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E70C972AA8B93B007BAD7B /* SceneDelegate.swift */; };
@@ -68,8 +79,8 @@
 /* Begin PBXFileReference section */
 		2514FB192BB9343900D5A09D /* HomeRecommendContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendContainerCell.swift; sourceTree = "<group>"; };
 		2514FB1A2BB9343900D5A09D /* HomeRecommendContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommendContainerCell.xib; sourceTree = "<group>"; };
-		2514FB1D2BB9372E00D5A09D /* HomeRecommendItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendItemCell.swift; sourceTree = "<group>"; };
-		2514FB1E2BB9372E00D5A09D /* HomeRecommendItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommendItemCell.xib; sourceTree = "<group>"; };
+		2514FB1D2BB9372E00D5A09D /* VideoListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListItemCell.swift; sourceTree = "<group>"; };
+		2514FB1E2BB9372E00D5A09D /* VideoListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListItemCell.xib; sourceTree = "<group>"; };
 		2514FB212BB93C4000D5A09D /* HomeFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterView.swift; sourceTree = "<group>"; };
 		2514FB222BB93C4000D5A09D /* HomeFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFooterView.xib; sourceTree = "<group>"; };
 		2514FB292BB9502A00D5A09D /* HomeRankingContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingContainerCell.swift; sourceTree = "<group>"; };
@@ -100,6 +111,17 @@
 		25EDA6452BBBEA5C007D97C1 /* HomeRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendViewModel.swift; sourceTree = "<group>"; };
 		25EDA6472BBBFBDA007D97C1 /* HomeRankingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingHeaderView.swift; sourceTree = "<group>"; };
 		25EDA6482BBBFBDA007D97C1 /* HomeRankingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingHeaderView.xib; sourceTree = "<group>"; };
+		25EDA64B2BBC1F7F007D97C1 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		25EDA64E2BBC2060007D97C1 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		25EDA6532BBC23F5007D97C1 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		25EDA6552BBC23FE007D97C1 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		25EDA6572BBC2409007D97C1 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		25EDA6592BBC2410007D97C1 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
+		25EDA65B2BBC242D007D97C1 /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
+		25EDA65C2BBC242D007D97C1 /* BookmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
+		25EDA65F2BBC2689007D97C1 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		25EDA6612BBC26C4007D97C1 /* VideoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListItem.swift; sourceTree = "<group>"; };
+		25EDA6632BBC26FB007D97C1 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		68CA313B2AAA292900A744AF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		95E70C922AA8B93B007BAD7B /* KTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E70C952AA8B93B007BAD7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,8 +202,8 @@
 				2514FB362BB969E400D5A09D /* HomeRecentWatchItemCell.xib */,
 				2514FB192BB9343900D5A09D /* HomeRecommendContainerCell.swift */,
 				2514FB1A2BB9343900D5A09D /* HomeRecommendContainerCell.xib */,
-				2514FB1D2BB9372E00D5A09D /* HomeRecommendItemCell.swift */,
-				2514FB1E2BB9372E00D5A09D /* HomeRecommendItemCell.xib */,
+				2514FB1D2BB9372E00D5A09D /* VideoListItemCell.swift */,
+				2514FB1E2BB9372E00D5A09D /* VideoListItemCell.xib */,
 				2514FB212BB93C4000D5A09D /* HomeFooterView.swift */,
 				2514FB222BB93C4000D5A09D /* HomeFooterView.xib */,
 			);
@@ -204,6 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				25EDA63B2BB98FF9007D97C1 /* Home.swift */,
+				25EDA65F2BBC2689007D97C1 /* Bookmark.swift */,
+				25EDA6632BBC26FB007D97C1 /* Favorite.swift */,
+				25EDA6612BBC26C4007D97C1 /* VideoListItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +248,36 @@
 				25EDA6432BB995A1007D97C1 /* URLDefines.swift */,
 			);
 			path = URLDefines;
+			sourceTree = "<group>";
+		};
+		25EDA64D2BBC2053007D97C1 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				25EDA6502BBC23D3007D97C1 /* Favorite */,
+				25EDA6522BBC23E1007D97C1 /* Bookmark */,
+				25EDA64E2BBC2060007D97C1 /* MyViewController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		25EDA6502BBC23D3007D97C1 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				25EDA6532BBC23F5007D97C1 /* FavoriteViewController.swift */,
+				25EDA6552BBC23FE007D97C1 /* FavoriteViewModel.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		25EDA6522BBC23E1007D97C1 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				25EDA65B2BBC242D007D97C1 /* BookmarkCell.swift */,
+				25EDA65C2BBC242D007D97C1 /* BookmarkCell.xib */,
+				25EDA6572BBC2409007D97C1 /* BookmarkViewController.swift */,
+				25EDA6592BBC2410007D97C1 /* BookmarkViewModel.swift */,
+			);
+			path = Bookmark;
 			sourceTree = "<group>";
 		};
 		95E70C892AA8B93B007BAD7B = {
@@ -249,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				257CE4472BB93100004E7C3C /* TabBarController.swift */,
+				25EDA64D2BBC2053007D97C1 /* My */,
 				25EDA63D2BB99495007D97C1 /* Util */,
 				25EDA63A2BB98FEC007D97C1 /* Model */,
 				25EDA6422BB9958E007D97C1 /* URLDefines */,
@@ -262,6 +318,7 @@
 				68CA313B2AAA292900A744AF /* Color.xcassets */,
 				95E70CA02AA8B93D007BAD7B /* LaunchScreen.storyboard */,
 				95E70CA32AA8B93D007BAD7B /* Info.plist */,
+				25EDA64B2BBC1F7F007D97C1 /* NavigationController.swift */,
 			);
 			path = KTV;
 			sourceTree = "<group>";
@@ -393,8 +450,9 @@
 				2514FB242BB93C4000D5A09D /* HomeFooterView.xib in Resources */,
 				2514FB302BB9532D00D5A09D /* HomeRankingItemCell.xib in Resources */,
 				95E70C9F2AA8B93D007BAD7B /* Assets.xcassets in Resources */,
+				25EDA65E2BBC242D007D97C1 /* BookmarkCell.xib in Resources */,
 				2514FB342BB9688C00D5A09D /* HomeRecentWatchContainerCell.xib in Resources */,
-				2514FB202BB9372E00D5A09D /* HomeRecommendItemCell.xib in Resources */,
+				2514FB202BB9372E00D5A09D /* VideoListItemCell.xib in Resources */,
 				254200C32BB924D700EA8289 /* HomeVideoCell.xib in Resources */,
 				2514FB382BB969E400D5A09D /* HomeRecentWatchItemCell.xib in Resources */,
 				95E70C9D2AA8B93B007BAD7B /* Main.storyboard in Resources */,
@@ -427,25 +485,35 @@
 			files = (
 				95E70C9A2AA8B93B007BAD7B /* LoginViewController.swift in Sources */,
 				2514FB332BB9688C00D5A09D /* HomeRecentWatchContainerCell.swift in Sources */,
+				25EDA6622BBC26C4007D97C1 /* VideoListItem.swift in Sources */,
 				2514FB232BB93C4000D5A09D /* HomeFooterView.swift in Sources */,
 				25EDA6492BBBFBDA007D97C1 /* HomeRankingHeaderView.swift in Sources */,
 				25EDA62F2BB98888007D97C1 /* HomeViewModel.swift in Sources */,
+				25EDA6602BBC2689007D97C1 /* Bookmark.swift in Sources */,
 				2514FB2F2BB9532D00D5A09D /* HomeRankingItemCell.swift in Sources */,
 				2514FB1B2BB9343900D5A09D /* HomeRecommendContainerCell.swift in Sources */,
+				25EDA6642BBC26FB007D97C1 /* Favorite.swift in Sources */,
+				25EDA6582BBC2409007D97C1 /* BookmarkViewController.swift in Sources */,
 				25EDA6462BBBEA5C007D97C1 /* HomeRecommendViewModel.swift in Sources */,
 				25EDA63C2BB98FF9007D97C1 /* Home.swift in Sources */,
+				25EDA65D2BBC242D007D97C1 /* BookmarkCell.swift in Sources */,
 				2514FB2B2BB9502A00D5A09D /* HomeRankingContainerCell.swift in Sources */,
 				25EDA63F2BB9949C007D97C1 /* DataLoader.swift in Sources */,
-				2514FB1F2BB9372E00D5A09D /* HomeRecommendItemCell.swift in Sources */,
+				2514FB1F2BB9372E00D5A09D /* VideoListItemCell.swift in Sources */,
+				25EDA6562BBC23FE007D97C1 /* FavoriteViewModel.swift in Sources */,
 				25EDA6412BB99515007D97C1 /* UIImageView+Task.swift in Sources */,
 				257CE44B2BB93283004E7C3C /* HomeHeaderView.swift in Sources */,
+				25EDA6542BBC23F5007D97C1 /* FavoriteViewController.swift in Sources */,
 				95E70C962AA8B93B007BAD7B /* AppDelegate.swift in Sources */,
+				25EDA64C2BBC1F7F007D97C1 /* NavigationController.swift in Sources */,
 				2514FB372BB969E400D5A09D /* HomeRecentWatchItemCell.swift in Sources */,
 				257CE4462BB92F76004E7C3C /* HomeSection.swift in Sources */,
 				95E70C982AA8B93B007BAD7B /* SceneDelegate.swift in Sources */,
 				25EDA6442BB995A1007D97C1 /* URLDefines.swift in Sources */,
 				257CE4482BB93100004E7C3C /* TabBarController.swift in Sources */,
+				25EDA65A2BBC2410007D97C1 /* BookmarkViewModel.swift in Sources */,
 				254200C42BB924D700EA8289 /* HomeVideoCell.swift in Sources */,
+				25EDA64F2BBC2060007D97C1 /* MyViewController.swift in Sources */,
 				254200BF2BB9240800EA8289 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

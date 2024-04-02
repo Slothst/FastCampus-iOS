@@ -1,5 +1,5 @@
 //
-//  HomeRecommendItemCell.swift
+//  VideoListItemCell.swift
 //  KTV
 //
 //  Created by 최낙주 on 3/31/24.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class HomeRecommendItemCell: UITableViewCell {
+class VideoListItemCell: UITableViewCell {
     
     static let height: CGFloat = 71
     static let identifier: String = "HomeRecommendItemCell"
     
+    @IBOutlet weak var contentLeadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var thumbnailContainerView: UIView!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var rankLabel: UILabel!
@@ -35,6 +36,8 @@ class HomeRecommendItemCell: UITableViewCell {
         self.rankLabel.layer.cornerRadius = 5
         self.rankLabel.clipsToBounds = true
         self.playTimeBGView.layer.cornerRadius = 3
+        
+        self.backgroundConfiguration = .clear()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -53,7 +56,7 @@ class HomeRecommendItemCell: UITableViewCell {
         self.rankLabel.text = nil
     }
     
-    func setData(_ data: Home.Recommend, rank: Int?) {
+    func setData(_ data: VideoListItem, rank: Int?) {
         self.rankLabel.isHidden = rank == nil
         if let rank {
             self.rankLabel.text = "\(rank)"
@@ -62,5 +65,9 @@ class HomeRecommendItemCell: UITableViewCell {
         self.descriptionLabel.text = data.channel
         self.playTimeLabel.text = Self.timeFormatter.string(from: data.playtime)
         self.imageTask = self.thumbnailImageView.loadImage(url: data.imageUrl)
+    }
+    
+    func setLeading(_ leading: CGFloat) {
+        self.contentLeadingConstraint.constant = leading
     }
 }
