@@ -16,6 +16,7 @@
                 <outlet property="favoriteButton" destination="8Gp-VP-5GF" id="f2f-VE-b65"/>
                 <outlet property="playButton" destination="8gm-QE-Mdk" id="c22-OI-kjf"/>
                 <outlet property="playCountLabel" destination="VYb-2v-RPy" id="jGm-Xr-8tM"/>
+                <outlet property="playerView" destination="9Vg-8R-fjh" id="WW6-n8-XfS"/>
                 <outlet property="portraitControlPannel" destination="yEj-ch-VWX" id="kpC-zE-YLY"/>
                 <outlet property="recommendTableView" destination="b1e-rQ-UGk" id="Iqb-Uv-2hX"/>
                 <outlet property="tableViewHeightConstraint" destination="cR1-6u-SqL" id="dlQ-pY-i94"/>
@@ -32,7 +33,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdT-Gv-i8B" userLabel="VideoContainerView">
                     <rect key="frame" x="0.0" y="59" width="393" height="221"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vg-8R-fjh">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Vg-8R-fjh" customClass="PlayerView" customModule="KTV" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="221"/>
                             <color key="backgroundColor" name="d-text-deep"/>
                         </view>

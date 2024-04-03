@@ -56,6 +56,7 @@
 		25EDA6742BBD293C007D97C1 /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6732BBD293C007D97C1 /* MoreViewModel.swift */; };
 		25EDA6762BBD3296007D97C1 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6752BBD3296007D97C1 /* Video.swift */; };
 		25EDA6782BBD32F5007D97C1 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6772BBD32F5007D97C1 /* VideoViewModel.swift */; };
+		25EDA67A2BBD37AB007D97C1 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6792BBD37AB007D97C1 /* PlayerView.swift */; };
 		68CA313C2AAA292900A744AF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CA313B2AAA292900A744AF /* Color.xcassets */; };
 		95E70C962AA8B93B007BAD7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E70C952AA8B93B007BAD7B /* AppDelegate.swift */; };
 		95E70C982AA8B93B007BAD7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E70C972AA8B93B007BAD7B /* SceneDelegate.swift */; };
@@ -140,6 +141,7 @@
 		25EDA6732BBD293C007D97C1 /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		25EDA6752BBD3296007D97C1 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		25EDA6772BBD32F5007D97C1 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		25EDA6792BBD37AB007D97C1 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		68CA313B2AAA292900A744AF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		95E70C922AA8B93B007BAD7B /* KTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E70C952AA8B93B007BAD7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				25EDA6662BBD0F53007D97C1 /* VideoViewController.swift */,
 				25EDA6672BBD0F53007D97C1 /* VideoViewController.xib */,
 				25EDA6772BBD32F5007D97C1 /* VideoViewModel.swift */,
+				25EDA6792BBD37AB007D97C1 /* PlayerView.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				257CE4462BB92F76004E7C3C /* HomeSection.swift in Sources */,
 				95E70C982AA8B93B007BAD7B /* SceneDelegate.swift in Sources */,
 				25EDA6442BB995A1007D97C1 /* URLDefines.swift in Sources */,
+				25EDA67A2BBD37AB007D97C1 /* PlayerView.swift in Sources */,
 				257CE4482BB93100004E7C3C /* TabBarController.swift in Sources */,
 				25EDA65A2BBC2410007D97C1 /* BookmarkViewModel.swift in Sources */,
 				254200C42BB924D700EA8289 /* HomeVideoCell.swift in Sources */,
