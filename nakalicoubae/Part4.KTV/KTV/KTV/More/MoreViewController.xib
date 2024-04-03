@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreViewController" customModule="KTV" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="Lke-eh-3uF" id="kZm-FY-cBo"/>
+                <outlet property="tableView" destination="WDF-JS-TYv" id="603-mi-6QJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lke-eh-3uF">
+                    <rect key="frame" x="0.0" y="573" width="393" height="46"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eiK-Of-f9q">
+                            <rect key="frame" x="172.33333333333334" y="14.666666666666629" width="48.666666666666657" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" name="main-wh"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcb-JI-eFg">
+                            <rect key="frame" x="332" y="3" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="4JZ-Lk-woM"/>
+                                <constraint firstAttribute="width" constant="40" id="ki7-z6-2Bx"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="small_close"/>
+                            <connections>
+                                <action selector="closeDidTap:" destination="-1" eventType="touchUpInside" id="kSF-vo-WJs"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="bg"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Gcb-JI-eFg" secondAttribute="trailing" constant="21" id="LAP-Gn-iAV"/>
+                        <constraint firstItem="eiK-Of-f9q" firstAttribute="centerY" secondItem="Lke-eh-3uF" secondAttribute="centerY" id="fYa-Lm-16T"/>
+                        <constraint firstItem="eiK-Of-f9q" firstAttribute="centerX" secondItem="Lke-eh-3uF" secondAttribute="centerX" id="iAb-Fs-706"/>
+                        <constraint firstAttribute="height" constant="46" id="qHC-ZY-Xzm"/>
+                        <constraint firstItem="Gcb-JI-eFg" firstAttribute="centerY" secondItem="Lke-eh-3uF" secondAttribute="centerY" id="smP-kY-5Io"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WDF-JS-TYv">
+                    <rect key="frame" x="0.0" y="619" width="393" height="233"/>
+                    <color key="backgroundColor" name="bg"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="233" id="LIH-DS-C79"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="bg-controlpannel"/>
+            <constraints>
+                <constraint firstItem="Lke-eh-3uF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="395-u1-jHb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WDF-JS-TYv" secondAttribute="trailing" id="439-ZQ-oEu"/>
+                <constraint firstItem="WDF-JS-TYv" firstAttribute="top" secondItem="Lke-eh-3uF" secondAttribute="bottom" id="5ze-hK-6mb"/>
+                <constraint firstItem="WDF-JS-TYv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="A7I-2j-WaR"/>
+                <constraint firstAttribute="bottom" secondItem="WDF-JS-TYv" secondAttribute="bottom" id="vR7-vK-82F"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Lke-eh-3uF" secondAttribute="trailing" id="xaH-Mf-DCB"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="small_close" width="26" height="26"/>
+        <namedColor name="bg">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg-controlpannel">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-wh">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

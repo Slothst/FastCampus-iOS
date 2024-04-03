@@ -32,6 +32,7 @@ class HomeVideoCell: UICollectionViewCell {
         self.containerView.layer.borderColor = UIColor(named: "stroke-light")?.cgColor
         
         self.channelImageView.layer.cornerRadius = 10
+        self.channelImageView.clipsToBounds = true
     }
     
     override func prepareForReuse() {
