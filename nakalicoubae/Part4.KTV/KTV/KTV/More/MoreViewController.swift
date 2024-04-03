@@ -38,6 +38,17 @@ class MoreViewController: UIViewController {
         self.setupCornerRadius()
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.setupCornerRadius()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
+        coordinator.animate { _ in
+            self.setupCornerRadius()
+        }
+    }
+    
     @IBAction func closeDidTap(_ sender: Any) {
         self.dismiss(animated: false)
     }
