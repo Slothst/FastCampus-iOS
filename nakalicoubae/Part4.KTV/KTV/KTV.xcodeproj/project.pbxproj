@@ -59,6 +59,11 @@
 		25EDA67A2BBD37AB007D97C1 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6792BBD37AB007D97C1 /* PlayerView.swift */; };
 		25EDA67C2BBD9555007D97C1 /* SeekbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA67B2BBD9555007D97C1 /* SeekbarView.swift */; };
 		25EDA67F2BBD9D3E007D97C1 /* DateComponentsFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA67E2BBD9D3E007D97C1 /* DateComponentsFormatterExtension.swift */; };
+		25EDA6822BBE6356007D97C1 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6812BBE6356007D97C1 /* LiveViewController.swift */; };
+		25EDA6852BBE679F007D97C1 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6832BBE679F007D97C1 /* LiveCell.swift */; };
+		25EDA6862BBE679F007D97C1 /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25EDA6842BBE679F007D97C1 /* LiveCell.xib */; };
+		25EDA6882BBE6D68007D97C1 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6872BBE6D68007D97C1 /* Live.swift */; };
+		25EDA68A2BBE6DD7007D97C1 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA6892BBE6DD7007D97C1 /* LiveViewModel.swift */; };
 		68CA313C2AAA292900A744AF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CA313B2AAA292900A744AF /* Color.xcassets */; };
 		95E70C962AA8B93B007BAD7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E70C952AA8B93B007BAD7B /* AppDelegate.swift */; };
 		95E70C982AA8B93B007BAD7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E70C972AA8B93B007BAD7B /* SceneDelegate.swift */; };
@@ -146,6 +151,11 @@
 		25EDA6792BBD37AB007D97C1 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		25EDA67B2BBD9555007D97C1 /* SeekbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekbarView.swift; sourceTree = "<group>"; };
 		25EDA67E2BBD9D3E007D97C1 /* DateComponentsFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateComponentsFormatterExtension.swift; sourceTree = "<group>"; };
+		25EDA6812BBE6356007D97C1 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		25EDA6832BBE679F007D97C1 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		25EDA6842BBE679F007D97C1 /* LiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
+		25EDA6872BBE6D68007D97C1 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		25EDA6892BBE6DD7007D97C1 /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 		68CA313B2AAA292900A744AF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		95E70C922AA8B93B007BAD7B /* KTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95E70C952AA8B93B007BAD7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +264,7 @@
 				25EDA6632BBC26FB007D97C1 /* Favorite.swift */,
 				25EDA6612BBC26C4007D97C1 /* VideoListItem.swift */,
 				25EDA6752BBD3296007D97C1 /* Video.swift */,
+				25EDA6872BBE6D68007D97C1 /* Live.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,6 +348,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		25EDA6802BBE6338007D97C1 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				25EDA6812BBE6356007D97C1 /* LiveViewController.swift */,
+				25EDA6832BBE679F007D97C1 /* LiveCell.swift */,
+				25EDA6842BBE679F007D97C1 /* LiveCell.xib */,
+				25EDA6892BBE6DD7007D97C1 /* LiveViewModel.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
 		95E70C892AA8B93B007BAD7B = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +382,7 @@
 		95E70C942AA8B93B007BAD7B /* KTV */ = {
 			isa = PBXGroup;
 			children = (
+				25EDA6802BBE6338007D97C1 /* Live */,
 				25EDA67D2BBD9D2C007D97C1 /* Extensions */,
 				25EDA66A2BBD2584007D97C1 /* More */,
 				25EDA6652BBD0F37007D97C1 /* Video */,
@@ -508,6 +531,7 @@
 				25EDA66E2BBD2593007D97C1 /* MoreViewController.xib in Resources */,
 				95E70CA22AA8B93D007BAD7B /* LaunchScreen.storyboard in Resources */,
 				2514FB1C2BB9343900D5A09D /* HomeRecommendContainerCell.xib in Resources */,
+				25EDA6862BBE679F007D97C1 /* LiveCell.xib in Resources */,
 				68CA313C2AAA292900A744AF /* Color.xcassets in Resources */,
 				2514FB242BB93C4000D5A09D /* HomeFooterView.xib in Resources */,
 				2514FB302BB9532D00D5A09D /* HomeRankingItemCell.xib in Resources */,
@@ -562,6 +586,7 @@
 				25EDA6712BBD27B6007D97C1 /* MoreTableViewCell.swift in Sources */,
 				25EDA67F2BBD9D3E007D97C1 /* DateComponentsFormatterExtension.swift in Sources */,
 				25EDA6462BBBEA5C007D97C1 /* HomeRecommendViewModel.swift in Sources */,
+				25EDA6822BBE6356007D97C1 /* LiveViewController.swift in Sources */,
 				25EDA63C2BB98FF9007D97C1 /* Home.swift in Sources */,
 				25EDA65D2BBC242D007D97C1 /* BookmarkCell.swift in Sources */,
 				2514FB2B2BB9502A00D5A09D /* HomeRankingContainerCell.swift in Sources */,
@@ -570,6 +595,7 @@
 				25EDA6682BBD0F53007D97C1 /* VideoViewController.swift in Sources */,
 				25EDA6562BBC23FE007D97C1 /* FavoriteViewModel.swift in Sources */,
 				25EDA6412BB99515007D97C1 /* UIImageView+Task.swift in Sources */,
+				25EDA6882BBE6D68007D97C1 /* Live.swift in Sources */,
 				257CE44B2BB93283004E7C3C /* HomeHeaderView.swift in Sources */,
 				25EDA6542BBC23F5007D97C1 /* FavoriteViewController.swift in Sources */,
 				95E70C962AA8B93B007BAD7B /* AppDelegate.swift in Sources */,
@@ -579,12 +605,14 @@
 				25EDA64C2BBC1F7F007D97C1 /* NavigationController.swift in Sources */,
 				2514FB372BB969E400D5A09D /* HomeRecentWatchItemCell.swift in Sources */,
 				257CE4462BB92F76004E7C3C /* HomeSection.swift in Sources */,
+				25EDA6852BBE679F007D97C1 /* LiveCell.swift in Sources */,
 				95E70C982AA8B93B007BAD7B /* SceneDelegate.swift in Sources */,
 				25EDA6442BB995A1007D97C1 /* URLDefines.swift in Sources */,
 				25EDA67A2BBD37AB007D97C1 /* PlayerView.swift in Sources */,
 				257CE4482BB93100004E7C3C /* TabBarController.swift in Sources */,
 				25EDA65A2BBC2410007D97C1 /* BookmarkViewModel.swift in Sources */,
 				254200C42BB924D700EA8289 /* HomeVideoCell.swift in Sources */,
+				25EDA68A2BBE6DD7007D97C1 /* LiveViewModel.swift in Sources */,
 				25EDA64F2BBC2060007D97C1 /* MyViewController.swift in Sources */,
 				254200BF2BB9240800EA8289 /* HomeViewController.swift in Sources */,
 			);
