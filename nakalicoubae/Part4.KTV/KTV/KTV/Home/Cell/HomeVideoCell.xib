@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="410" height="300"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VfW-nd-mRr">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VfW-nd-mRr">
                         <rect key="frame" x="0.0" y="0.0" width="410" height="300"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8S-f0-L31">
@@ -26,9 +26,6 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RTB-Ik-dfp">
                                         <rect key="frame" x="0.0" y="0.0" width="410" height="160"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="160" id="qEg-en-v53"/>
-                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" name="more-bk"/>
