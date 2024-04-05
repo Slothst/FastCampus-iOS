@@ -19,7 +19,7 @@
                     <color key="backgroundColor" name="bg"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="랭킹 리스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0p-KF-dcb">
-                    <rect key="frame" x="21" y="21" width="83" height="21"/>
+                    <rect key="frame" x="0.0" y="21" width="83" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                     <color key="textColor" name="main-wh"/>
                     <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
                 <constraint firstItem="TPe-S3-TJP" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="U5p-Tt-1N6"/>
                 <constraint firstAttribute="trailing" secondItem="TPe-S3-TJP" secondAttribute="trailing" id="VIr-EX-R16"/>
                 <constraint firstAttribute="bottom" secondItem="O0p-KF-dcb" secondAttribute="bottom" constant="21" id="aaT-dV-ilI"/>
-                <constraint firstItem="O0p-KF-dcb" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="21" id="et7-0n-jGm"/>
+                <constraint firstItem="O0p-KF-dcb" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="et7-0n-jGm"/>
                 <constraint firstItem="O0p-KF-dcb" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="21" id="uRK-za-LFz"/>
             </constraints>
             <point key="canvasLocation" x="139" y="21"/>
