@@ -17,12 +17,14 @@ class MoreViewController: UIViewController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
         self.modalPresentationStyle = .overFullScreen
+        self.modalTransitionStyle = .crossDissolve
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         self.modalPresentationStyle = .overFullScreen
+        self.modalTransitionStyle = .crossDissolve
     }
 
     override func viewDidLoad() {
@@ -50,7 +52,7 @@ class MoreViewController: UIViewController {
     }
     
     @IBAction func closeDidTap(_ sender: Any) {
-        self.dismiss(animated: false)
+        self.dismiss(animated: true)
     }
     
     private func setupCornerRadius() {

@@ -185,7 +185,7 @@ extension VideoViewController {
     
     @IBAction func moreDidTap(_ sender: Any) {
         let moreVC = MoreViewController()
-        self.present(moreVC, animated: false)
+        self.present(moreVC, animated: true)
     }
     
     @IBAction func expandDidTap(_ sender: Any) {
