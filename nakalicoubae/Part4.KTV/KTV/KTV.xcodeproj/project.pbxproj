@@ -28,6 +28,7 @@
 		257CE4482BB93100004E7C3C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CE4472BB93100004E7C3C /* TabBarController.swift */; };
 		257CE44B2BB93283004E7C3C /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257CE4492BB93283004E7C3C /* HomeHeaderView.swift */; };
 		257CE44C2BB93283004E7C3C /* HomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257CE44A2BB93283004E7C3C /* HomeHeaderView.xib */; };
+		25D7F81B2BD6514500D35316 /* VideoViewControllerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7F81A2BD6514500D35316 /* VideoViewControllerContainer.swift */; };
 		25EDA62F2BB98888007D97C1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA62E2BB98888007D97C1 /* HomeViewModel.swift */; };
 		25EDA63C2BB98FF9007D97C1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA63B2BB98FF9007D97C1 /* Home.swift */; };
 		25EDA63F2BB9949C007D97C1 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EDA63E2BB9949C007D97C1 /* DataLoader.swift */; };
@@ -122,6 +123,7 @@
 		257CE4472BB93100004E7C3C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		257CE4492BB93283004E7C3C /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		257CE44A2BB93283004E7C3C /* HomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderView.xib; sourceTree = "<group>"; };
+		25D7F81A2BD6514500D35316 /* VideoViewControllerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewControllerContainer.swift; sourceTree = "<group>"; };
 		25EDA62E2BB98888007D97C1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		25EDA6352BB98F70007D97C1 /* boorkmark.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = boorkmark.json; sourceTree = "<group>"; };
 		25EDA6362BB98F9D007D97C1 /* favorite.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = favorite.json; sourceTree = "<group>"; };
@@ -431,6 +433,7 @@
 				95E70CA02AA8B93D007BAD7B /* LaunchScreen.storyboard */,
 				95E70CA32AA8B93D007BAD7B /* Info.plist */,
 				25EDA64B2BBC1F7F007D97C1 /* NavigationController.swift */,
+				25D7F81A2BD6514500D35316 /* VideoViewControllerContainer.swift */,
 			);
 			path = KTV;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				25EDA6742BBD293C007D97C1 /* MoreViewModel.swift in Sources */,
 				25EDA6642BBC26FB007D97C1 /* Favorite.swift in Sources */,
 				25EDA6582BBC2409007D97C1 /* BookmarkViewController.swift in Sources */,
+				25D7F81B2BD6514500D35316 /* VideoViewControllerContainer.swift in Sources */,
 				25EDA6712BBD27B6007D97C1 /* MoreTableViewCell.swift in Sources */,
 				25EDA67F2BBD9D3E007D97C1 /* DateComponentsFormatterExtension.swift in Sources */,
 				25EDA6462BBBEA5C007D97C1 /* HomeRecommendViewModel.swift in Sources */,
