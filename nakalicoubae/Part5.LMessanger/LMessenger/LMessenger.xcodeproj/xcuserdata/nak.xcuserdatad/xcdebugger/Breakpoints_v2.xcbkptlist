@@ -3,4 +3,52 @@
    uuid = "46BC7402-FA48-4B37-A92D-CB6C875E349D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49D88B32-DC58-4A69-B5D1-E7FA25F3D908"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LMessenger/Service/AuthenticationService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "authenticationUserWithFirebase(credential:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "49D88B32-DC58-4A69-B5D1-E7FA25F3D908 - f7810e7e30d67ec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LMessenger.AuthenticationService.authenticationUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LMessenger.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nak/Desktop/study/swift/FastCampus/nakalicoubae/Part5.LMessanger/LMessenger/LMessenger/Service/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76">
+               </Location>
+               <Location
+                  uuid = "49D88B32-DC58-4A69-B5D1-E7FA25F3D908 - f7810e7e30d67ec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LMessenger.AuthenticationService.authenticationUserWithFirebase(credential: __C.FIRAuthCredential, completion: (Swift.Result&lt;LMessenger.User, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "LMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nak/Desktop/study/swift/FastCampus/nakalicoubae/Part5.LMessanger/LMessenger/LMessenger/Service/AuthenticationService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
