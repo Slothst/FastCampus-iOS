@@ -28,6 +28,7 @@
 		25FCC8752BDA3C4D0086FCBF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8742BDA3C4D0086FCBF /* HomeView.swift */; };
 		25FCC8782BDA3C570086FCBF /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8772BDA3C570086FCBF /* ChatListView.swift */; };
 		25FCC87A2BDA3DE80086FCBF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8792BDA3DE80086FCBF /* HomeViewModel.swift */; };
+		25FCC87D2BDA43B70086FCBF /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 25FCC87C2BDA43B70086FCBF /* FirebaseDatabase */; };
 		723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */; };
 		723ABD892AFFF1B800C260F1 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD882AFFF1B800C260F1 /* AuthenticatedView.swift */; };
 		723ABD8B2AFFF1B900C260F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723ABD8A2AFFF1B900C260F1 /* Assets.xcassets */; };
@@ -97,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FCC87D2BDA43B70086FCBF /* FirebaseDatabase in Frameworks */,
 				25D7F8652BD7F79400D35316 /* FirebaseAuth in Frameworks */,
 				25D7F8792BD920A400D35316 /* GoogleSignIn in Frameworks */,
 			);
@@ -211,6 +213,13 @@
 			path = ChatList;
 			sourceTree = "<group>";
 		};
+		25FCC87B2BDA43B70086FCBF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		723ABD7A2AFFF1B800C260F1 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +227,7 @@
 				723ABD962AFFF1B900C260F1 /* LMessengerTests */,
 				723ABDA02AFFF1B900C260F1 /* LMessengerUITests */,
 				723ABD842AFFF1B800C260F1 /* Products */,
+				25FCC87B2BDA43B70086FCBF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,6 +323,7 @@
 			packageProductDependencies = (
 				25D7F8642BD7F79400D35316 /* FirebaseAuth */,
 				25D7F8782BD920A400D35316 /* GoogleSignIn */,
+				25FCC87C2BDA43B70086FCBF /* FirebaseDatabase */,
 			);
 			productName = LMessenger;
 			productReference = 723ABD832AFFF1B800C260F1 /* LMessenger.app */;
@@ -815,6 +826,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 25D7F8772BD920A400D35316 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		25FCC87C2BDA43B70086FCBF /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25D7F8632BD7F79400D35316 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
