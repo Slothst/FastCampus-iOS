@@ -9,17 +9,17 @@ import Foundation
 
 class NavigationRouter: ObservableObject {
     
-    @Published var destination: [NavigationDestination] = []
+    @Published var destinations: [NavigationDestination] = []
     
     func push(to view: NavigationDestination) {
-        destination.append(view)
+        destinations.append(view)
     }
     
     func pop() {
-        _ = destination.popLast()
+        _ = destinations.popLast()
     }
     
     func popToRootView() {
-        destination = []
+        destinations = []
     }
 }
