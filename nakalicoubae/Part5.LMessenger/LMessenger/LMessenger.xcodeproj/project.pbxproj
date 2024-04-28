@@ -45,6 +45,8 @@
 		25FCC8A32BDD1EEF0086FCBF /* MyProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8A22BDD1EEF0086FCBF /* MyProfileViewModel.swift */; };
 		25FCC8A52BDD211C0086FCBF /* MyProfileMenuType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8A42BDD211C0086FCBF /* MyProfileMenuType.swift */; };
 		25FCC8A72BDD26770086FCBF /* MyProfileDescEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8A62BDD26770086FCBF /* MyProfileDescEditView.swift */; };
+		25FCC8A92BDE0E680086FCBF /* PhotoPickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8A82BDE0E680086FCBF /* PhotoPickerService.swift */; };
+		25FCC8AC2BDE0F670086FCBF /* PhotoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FCC8AB2BDE0F670086FCBF /* PhotoImage.swift */; };
 		723ABD872AFFF1B800C260F1 /* LMessengerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */; };
 		723ABD892AFFF1B800C260F1 /* AuthenticatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ABD882AFFF1B800C260F1 /* AuthenticatedView.swift */; };
 		723ABD8B2AFFF1B900C260F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723ABD8A2AFFF1B900C260F1 /* Assets.xcassets */; };
@@ -111,6 +113,8 @@
 		25FCC8A22BDD1EEF0086FCBF /* MyProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewModel.swift; sourceTree = "<group>"; };
 		25FCC8A42BDD211C0086FCBF /* MyProfileMenuType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileMenuType.swift; sourceTree = "<group>"; };
 		25FCC8A62BDD26770086FCBF /* MyProfileDescEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileDescEditView.swift; sourceTree = "<group>"; };
+		25FCC8A82BDE0E680086FCBF /* PhotoPickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerService.swift; sourceTree = "<group>"; };
+		25FCC8AB2BDE0F670086FCBF /* PhotoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoImage.swift; sourceTree = "<group>"; };
 		723ABD832AFFF1B800C260F1 /* LMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		723ABD862AFFF1B800C260F1 /* LMessengerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMessengerApp.swift; sourceTree = "<group>"; };
 		723ABD882AFFF1B800C260F1 /* AuthenticatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedView.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		25D7F8592BD7ADB500D35316 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				25FCC8AA2BDE0F570086FCBF /* PhotoPicker */,
 				25D7F85A2BD7ADC700D35316 /* Services.swift */,
 				25D7F86B2BD7FED900D35316 /* AuthenticationService.swift */,
 				25D7F87D2BD9229C00D35316 /* ServiceError.swift */,
@@ -297,6 +302,15 @@
 				25FCC8A62BDD26770086FCBF /* MyProfileDescEditView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		25FCC8AA2BDE0F570086FCBF /* PhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				25FCC8A82BDE0E680086FCBF /* PhotoPickerService.swift */,
+				25FCC8AB2BDE0F670086FCBF /* PhotoImage.swift */,
+			);
+			path = PhotoPicker;
 			sourceTree = "<group>";
 		};
 		723ABD7A2AFFF1B800C260F1 = {
@@ -529,6 +543,7 @@
 				25FCC8872BDA47C00086FCBF /* DBError.swift in Sources */,
 				25D7F87C2BD9225100D35316 /* User.swift in Sources */,
 				25FCC8722BDA3B790086FCBF /* MainTabType.swift in Sources */,
+				25FCC8A92BDE0E680086FCBF /* PhotoPickerService.swift in Sources */,
 				25D7F8702BD8003E00D35316 /* LoginIntroView.swift in Sources */,
 				25FCC8852BDA477E0086FCBF /* UserObject.swift in Sources */,
 				25FCC8932BDA96100086FCBF /* ErrorView.swift in Sources */,
@@ -547,6 +562,7 @@
 				25D7F8672BD7FD7800D35316 /* AppDelegate.swift in Sources */,
 				25FCC8782BDA3C570086FCBF /* ChatListView.swift in Sources */,
 				72E4BEFC2B00B871007A1060 /* Color+Extension.swift in Sources */,
+				25FCC8AC2BDE0F670086FCBF /* PhotoImage.swift in Sources */,
 				25FCC8752BDA3C4D0086FCBF /* HomeView.swift in Sources */,
 				25FCC8A32BDD1EEF0086FCBF /* MyProfileViewModel.swift in Sources */,
 				25D7F8762BD8031E00D35316 /* LoginButtonStyle.swift in Sources */,
