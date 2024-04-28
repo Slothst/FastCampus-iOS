@@ -36,5 +36,51 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E68800A7-2C71-446F-91AA-7BC597FBEBB4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LMessenger/Service/ChatRoomService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "createChatRoomIfNeeded(myUserId:otherUserId:otherUserName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E68800A7-2C71-446F-91AA-7BC597FBEBB4 - 39b46da2a9c77a18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;LMessenger.ChatRoomObject&gt;) -&gt; Combine.AnyPublisher&lt;LMessenger.ChatRoom, LMessenger.ServiceError&gt; in LMessenger.ChatRoomService.createChatRoomIfNeeded(myUserId: Swift.String, otherUserId: Swift.String, otherUserName: Swift.String) -&gt; Combine.AnyPublisher&lt;LMessenger.ChatRoom, LMessenger.ServiceError&gt;"
+                  moduleName = "LMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nak/Desktop/study/swift/FastCampus/nakalicoubae/Part5.LMessenger/LMessenger/LMessenger/Service/ChatRoomService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
+               </Location>
+               <Location
+                  uuid = "E68800A7-2C71-446F-91AA-7BC597FBEBB4 - 39b46da2a9c77a18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;LMessenger.ChatRoomObject&gt;) -&gt; Combine.AnyPublisher&lt;LMessenger.ChatRoom, LMessenger.ServiceError&gt; in LMessenger.ChatRoomService.createChatRoomIfNeeded(myUserId: Swift.String, otherUserId: Swift.String, otherUserName: Swift.String) -&gt; Combine.AnyPublisher&lt;LMessenger.ChatRoom, LMessenger.ServiceError&gt;"
+                  moduleName = "LMessenger"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nak/Desktop/study/swift/FastCampus/nakalicoubae/Part5.LMessenger/LMessenger/LMessenger/Service/ChatRoomService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

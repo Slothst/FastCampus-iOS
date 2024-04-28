@@ -9,17 +9,28 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var container: DIContainer
+    @EnvironmentObject var navigationRouter: NavigationRouter
     @StateObject var viewModel: HomeViewModel
     
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationRouter.destination) {
             contentView
                 .fullScreenCover(item: $viewModel.modalDestination) {
                     switch $0 {
                     case .myProfile:
                         MyProfileView(viewModel: .init(container: container, userId: viewModel.userId))
                     case let .otherProfile(userId):
-                        OtherProfileView()
+                        OtherProfileView(viewModel: .init(container: container, userId: userId)) { otherUserInfo in
+                            viewModel.send(action: .goToChat(otherUserInfo))
+                        }
+                    }
+                }
+                .navigationDestination(for: NavigationDestination.self) {
+                    switch $0 {
+                    case .chat:
+                        ChatView()
+                    case .search:
+                        SearchView()
                     }
                 }
         }
@@ -120,22 +131,24 @@ struct HomeView: View {
     }
     
     var searchButton: some View {
-        ZStack {
-            Rectangle()
-                .foregroundColor(.clear)
-                .frame(height: 36)
-                .background(Color.greyCool)
-                .clipShape(RoundedRectangle(cornerRadius: 5))
-            
-            HStack {
-                Text("검색")
-                    .font(.system(size: 12))
-                    .foregroundStyle(Color.greyLightVer2)
-                Spacer()
+        NavigationLink(value: NavigationDestination.search) {
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.clear)
+                    .frame(height: 36)
+                    .background(Color.greyCool)
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                
+                HStack {
+                    Text("검색")
+                        .font(.system(size: 12))
+                        .foregroundStyle(Color.greyLightVer2)
+                    Spacer()
+                }
+                .padding(.leading, 22)
             }
-            .padding(.leading, 22)
+            .padding(.horizontal, 30)
         }
-        .padding(.horizontal, 30)
     }
     
     var emptyView: some View {
@@ -167,6 +180,13 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView(viewModel: .init(container: .init(services: StubService()), userId: "user1_id"))
+struct HomeView_Previews: PreviewProvider {
+    static let container: DIContainer = .init(services: StubService())
+    static let navigationRouter: NavigationRouter = .init()
+    
+    static var previews: some View {
+        HomeView(viewModel: .init(container: Self.container, navigationRouter: Self.navigationRouter, userId: "user1_id"))
+            .environmentObject(Self.navigationRouter)
+            .environmentObject(Self.container)
+    }
 }
