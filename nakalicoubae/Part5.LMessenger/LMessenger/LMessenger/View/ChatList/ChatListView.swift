@@ -57,7 +57,7 @@ fileprivate struct ChatRoomCell: View {
                         .font(.system(size: 14, weight: .bold))
                         .foregroundStyle(Color.bkText)
                     if let lastMessage = chatRoom.lastMessage {
-                        Text(chatRoom.lastMessage ?? "")
+                        Text(lastMessage)
                             .font(.system(size: 12))
                             .foregroundStyle(Color.greyDeep)
                     }
