@@ -13,6 +13,9 @@
 		2508930D2BE2763F00AD9503 /* PushObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508930C2BE2763F00AD9503 /* PushObject.swift */; };
 		2508930F2BE368EE00AD9503 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2508930E2BE368EE00AD9503 /* SearchViewModel.swift */; };
 		250893112BE36A4300AD9503 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250893102BE36A4300AD9503 /* SearchBar.swift */; };
+		250893142BE3746300AD9503 /* Search.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 250893122BE3746300AD9503 /* Search.xcdatamodeld */; };
+		250893172BE374C300AD9503 /* SearchDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250893162BE374C300AD9503 /* SearchDataController.swift */; };
+		250893192BE375DB00AD9503 /* RecentSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250893182BE375DB00AD9503 /* RecentSearchView.swift */; };
 		25D7F8552BD7ACDB00D35316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25D7F8542BD7ACDB00D35316 /* LaunchScreen.storyboard */; };
 		25D7F8582BD7AD8700D35316 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7F8572BD7AD8700D35316 /* DIContainer.swift */; };
 		25D7F85B2BD7ADC700D35316 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D7F85A2BD7ADC700D35316 /* Services.swift */; };
@@ -121,6 +124,9 @@
 		2508930C2BE2763F00AD9503 /* PushObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushObject.swift; sourceTree = "<group>"; };
 		2508930E2BE368EE00AD9503 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		250893102BE36A4300AD9503 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		250893132BE3746300AD9503 /* Search.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Search.xcdatamodel; sourceTree = "<group>"; };
+		250893162BE374C300AD9503 /* SearchDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataController.swift; sourceTree = "<group>"; };
+		250893182BE375DB00AD9503 /* RecentSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchView.swift; sourceTree = "<group>"; };
 		25D7F8542BD7ACDB00D35316 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25D7F8572BD7AD8700D35316 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		25D7F85A2BD7ADC700D35316 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
@@ -237,11 +243,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		250893152BE374B200AD9503 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				250893162BE374C300AD9503 /* SearchDataController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		25D7F8562BD7AD7800D35316 /* General */ = {
 			isa = PBXGroup;
 			children = (
 				25FCC88C2BDA958E0086FCBF /* View */,
 				25FCC8D42BDE2C5F0086FCBF /* Navigation */,
+				250893152BE374B200AD9503 /* Search */,
 				25D7F8572BD7AD8700D35316 /* DIContainer.swift */,
 				25FCC8882BDA497F0086FCBF /* Constant.swift */,
 				25FCC88A2BDA94FA0086FCBF /* Phase.swift */,
@@ -499,6 +514,7 @@
 				25FCC8DD2BDE2DC70086FCBF /* SearchView.swift */,
 				2508930E2BE368EE00AD9503 /* SearchViewModel.swift */,
 				250893102BE36A4300AD9503 /* SearchBar.swift */,
+				250893182BE375DB00AD9503 /* RecentSearchView.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -590,6 +606,7 @@
 				25D7F8542BD7ACDB00D35316 /* LaunchScreen.storyboard */,
 				723ABD8A2AFFF1B900C260F1 /* Assets.xcassets */,
 				723ABDB12AFFF1F000C260F1 /* Colors.xcassets */,
+				250893122BE3746300AD9503 /* Search.xcdatamodeld */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -768,11 +785,13 @@
 				25D7F85F2BD7AE4500D35316 /* AuthenticationViewModel.swift in Sources */,
 				25FCC88E2BDA959A0086FCBF /* PlaceholderView.swift in Sources */,
 				25FCC8BB2BDE17FD0086FCBF /* ImageCacheService.swift in Sources */,
+				250893172BE374C300AD9503 /* SearchDataController.swift in Sources */,
 				25FCC8992BDAA57C0086FCBF /* HomeModalDestination.swift in Sources */,
 				25FCC8CD2BDE26A00086FCBF /* ChatRoomDBRepository.swift in Sources */,
 				25D7F85B2BD7ADC700D35316 /* Services.swift in Sources */,
 				25FCC8B32BDE126D0086FCBF /* UploadProvider.swift in Sources */,
 				25FCC8822BDA467C0086FCBF /* UserService.swift in Sources */,
+				250893142BE3746300AD9503 /* Search.xcdatamodeld in Sources */,
 				25FCC8C92BDE233E0086FCBF /* OtherProfileViewModel.swift in Sources */,
 				25FCC8EE2BE0DE860086FCBF /* ChatItemView.swift in Sources */,
 				25FCC8802BDA46500086FCBF /* UserDBRepository.swift in Sources */,
@@ -783,6 +802,7 @@
 				250893112BE36A4300AD9503 /* SearchBar.swift in Sources */,
 				25FCC8D82BDE2C860086FCBF /* NavigationRouter.swift in Sources */,
 				25D7F8672BD7FD7800D35316 /* AppDelegate.swift in Sources */,
+				250893192BE375DB00AD9503 /* RecentSearchView.swift in Sources */,
 				25FCC8782BDA3C570086FCBF /* ChatListView.swift in Sources */,
 				72E4BEFC2B00B871007A1060 /* Color+Extension.swift in Sources */,
 				25FCC8E42BDE36990086FCBF /* NavigationRoutingView.swift in Sources */,
@@ -1209,6 +1229,20 @@
 			productName = "FirebaseStorageCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		250893122BE3746300AD9503 /* Search.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				250893132BE3746300AD9503 /* Search.xcdatamodel */,
+			);
+			currentVersion = 250893132BE3746300AD9503 /* Search.xcdatamodel */;
+			name = Search.xcdatamodeld;
+			path = /Users/nak/Desktop/study/swift/FastCampus/nakalicoubae/Part5.LMessenger/LMessenger/LMessenger/Resource/Search.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 723ABD7B2AFFF1B800C260F1 /* Project object */;
 }
