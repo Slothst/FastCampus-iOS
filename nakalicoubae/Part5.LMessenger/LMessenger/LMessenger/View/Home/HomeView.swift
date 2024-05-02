@@ -23,6 +23,8 @@ struct HomeView: View {
                         OtherProfileView(viewModel: .init(container: container, userId: userId)) { otherUserInfo in
                             viewModel.send(action: .goToChat(otherUserInfo))
                         }
+                    case .setting:
+                        SettingView(viewModel: .init())
                     }
                 }
                 .navigationDestination(for: NavigationDestination.self) {
@@ -48,7 +50,7 @@ struct HomeView: View {
                     Image("notifications")
                     Image("person_add")
                     Button {
-                        // TODO: -
+                        viewModel.send(action: .presentView(.setting))
                     } label: {
                         Image("settings")
                     }
@@ -81,23 +83,22 @@ struct HomeView: View {
                 emptyView
             } else {
                 LazyVStack {
-                    ForEach(viewModel.users, id: \.id) { user in
-                        Button {
-                            viewModel.send(action: .presentOtherProfileView(user.id))
-                        } label: {
-                            HStack(spacing: 8) {
-                                Image("person")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                    .clipShape(Circle())
-                                Text(user.name)
-                                    .font(.system(size: 12))
-                                    .foregroundStyle(Color.bkText)
-                                Spacer()
-                            }
-                            .padding(.horizontal, 30)
+                    ForEach(viewModel.users) { user in
+                        HStack(spacing: 8) {
+                            URLImageView(urlString: user.profileURL)
+                                .frame(width: 40, height: 40)
+                                .clipShape(Circle())
+                            Text(user.name)
+                                .font(.system(size: 12))
+                                .foregroundStyle(Color.bkText)
+                            Spacer()
+                        }
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            viewModel.send(action: .presentView(.otherProfile(user.id)))
                         }
                     }
+                    .padding(.horizontal, 30)
                 }
             }
         }
@@ -116,14 +117,13 @@ struct HomeView: View {
             
             Spacer()
             
-            Image("person")
-                .resizable()
+            URLImageView(urlString: viewModel.myUser?.profileURL)
                 .frame(width: 52, height: 52)
                 .clipShape(Circle())
         }
         .padding(.horizontal, 30)
         .onTapGesture {
-            viewModel.send(action: .presentMyProfileView)
+            viewModel.send(action: .presentView(.myProfile))
         }
     }
     
