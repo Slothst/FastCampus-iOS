@@ -22,8 +22,8 @@ struct NavigationRoutingView: View {
                     otherUserId: otherUserId
                 )
             )
-        case .search:
-            SearchView()
+        case let .search(userId):
+            SearchView(viewModel: .init(container: container, userId: userId))
         }
     }
 }
