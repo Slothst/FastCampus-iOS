@@ -11,6 +11,8 @@ struct RecentSearchView: View {
     @Environment(\.managedObjectContext) var objectContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date)]) var results: FetchedResults<SearchResult>
     
+    var onTapResult: ((String?) -> Void)
+    
     var body: some View {
         VStack(spacing: 0) {
             titleView
@@ -28,21 +30,26 @@ struct RecentSearchView: View {
                     LazyVStack {
                         ForEach(results, id: \.self) { result in
                             HStack {
-                                Text(result.name ?? "")
-                                    .font(.system(size: 14))
-                                    .foregroundStyle(Color.bkText)
-                                
+                                Button {
+                                    onTapResult(result.name)
+                                } label: {
+                                    Text(result.name ?? "")
+                                        .font(.system(size: 14))
+                                        .foregroundStyle(Color.bkText)
+                                }
+                        
                                 Spacer()
                                 
                                 Button {
                                     objectContext.delete(result)
                                     try? objectContext.save()
                                 } label: {
-                                    Image("close_search")
+                                    Image("close_search", label: Text("검색어 삭제"))
                                         .resizable()
                                         .frame(width: 15, height: 15)
                                 }
                             }
+                            .accessibilityElement(children: .combine)
                         }
                     }
                 }
@@ -58,9 +65,12 @@ struct RecentSearchView: View {
             
             Spacer()
         }
+        .accessibilityAddTraits(.isHeader)
     }
 }
 
 #Preview {
-    RecentSearchView()
+    RecentSearchView() { _ in
+        
+    }
 }
