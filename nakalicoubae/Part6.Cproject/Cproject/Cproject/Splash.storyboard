@@ -27,6 +27,11 @@
                             <constraint firstItem="RLP-Hp-PLp" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="IXI-lA-uNu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appIcon" destination="RLP-Hp-PLp" id="Psc-el-apK"/>
+                        <outlet property="appIconCenterXConstaint" destination="Cje-wu-Rt6" id="J5k-SE-ekM"/>
+                        <outlet property="appIconCenterYConstaint" destination="IXI-lA-uNu" id="CL5-Br-urY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
