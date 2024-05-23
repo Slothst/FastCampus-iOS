@@ -26,9 +26,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         bindingViewModel()
-        viewModel.loadData()
         setDataSource()
         collectionView.collectionViewLayout = compositionalLayout
+        
+        viewModel.process(action: .loadData)
     }
     
     private static func setCompositionalLayout() -> UICollectionViewCompositionalLayout {
@@ -50,17 +51,7 @@ class HomeViewController: UIViewController {
     }
     
     private func bindingViewModel() {
-        viewModel.$bannerViewModels.receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
-                self?.applySnapshot()
-            }.store(in: &cancellables)
-        
-        viewModel.$horizontalProductViewModels.receive(on: DispatchQueue.main)
-            .sink { [weak self] _ in
-                self?.applySnapshot()
-            }.store(in: &cancellables)
-        
-        viewModel.$verticalProductViewModels.receive(on: DispatchQueue.main)
+        viewModel.state.$collectionViewModels.receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.applySnapshot()
             }.store(in: &cancellables)
@@ -83,17 +74,17 @@ class HomeViewController: UIViewController {
     
     private func applySnapshot() {
         var snapshot: NSDiffableDataSourceSnapshot<Section, AnyHashable> = NSDiffableDataSourceSnapshot<Section, AnyHashable>()
-        if let bannerViewModels = viewModel.bannerViewModels {
+        if let bannerViewModels = viewModel.state.collectionViewModels.bannerViewModels {
             snapshot.appendSections([.banner])
             snapshot.appendItems(bannerViewModels, toSection: .banner)
         }
         
-        if let horizontalProductViewModels = viewModel.horizontalProductViewModels {
+        if let horizontalProductViewModels = viewModel.state.collectionViewModels.horizontalProductViewModels {
             snapshot.appendSections([.horizontalProductItem])
             snapshot.appendItems(horizontalProductViewModels, toSection: .horizontalProductItem)
         }
         
-        if let verticalProductViewModels = viewModel.verticalProductViewModels {
+        if let verticalProductViewModels = viewModel.state.collectionViewModels.verticalProductViewModels {
             snapshot.appendSections([.verticalProductItem])
             snapshot.appendItems(verticalProductViewModels, toSection: .verticalProductItem)
         }
