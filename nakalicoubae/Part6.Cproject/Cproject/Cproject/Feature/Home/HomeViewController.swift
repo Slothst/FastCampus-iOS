@@ -5,6 +5,7 @@
 //  Created by 최낙주 on 5/22/24.
 //
 
+import Combine
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -12,86 +13,107 @@ class HomeViewController: UIViewController {
     enum Section: Int {
         case banner
         case horizontalProductItem
+        case verticalProductItem
     }
 
     @IBOutlet weak var collectionView: UICollectionView!
     private var dataSource: UICollectionViewDiffableDataSource<Section, AnyHashable>?
-    private var compositionalLayout: UICollectionViewCompositionalLayout = {
+    private var compositionalLayout: UICollectionViewCompositionalLayout = setCompositionalLayout()
+    private var viewModel: HomeViewModel = HomeViewModel()
+    private var cancellables = Set<AnyCancellable>()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        bindingViewModel()
+        viewModel.loadData()
+        setDataSource()
+        collectionView.collectionViewLayout = compositionalLayout
+    }
+    
+    private static func setCompositionalLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { section, _ in
             switch Section(rawValue: section) {
             case .banner:
-                let itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-                let item: NSCollectionLayoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
-                
-                let groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(165 / 393))
-                let group: NSCollectionLayoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                
-                let section: NSCollectionLayoutSection = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .groupPaging
-                return section
+                return HomeBannerCollectionViewCell.bannerLayout()
                 
             case .horizontalProductItem:
-                let itemSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-                let item: NSCollectionLayoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+                return HomeProductCollectionViewCell.horizontalProductItemLayout()
                 
-                let groupSize: NSCollectionLayoutSize = NSCollectionLayoutSize(widthDimension: .absolute(117), heightDimension: .estimated(224))
-                let group: NSCollectionLayoutGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            case .verticalProductItem:
+                return HomeProductCollectionViewCell.verticalProductItemLayout()
                 
-                let section: NSCollectionLayoutSection = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .continuous
-                section.contentInsets = .init(top: 20, leading: 33, bottom: 0, trailing: 33)
-                return section
             case .none:
                 return nil
             }
         }
-        
-    }()
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, viewModel in
+    private func bindingViewModel() {
+        viewModel.$bannerViewModels.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.applySnapshot()
+            }.store(in: &cancellables)
+        
+        viewModel.$horizontalProductViewModels.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.applySnapshot()
+            }.store(in: &cancellables)
+        
+        viewModel.$verticalProductViewModels.receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.applySnapshot()
+            }.store(in: &cancellables)
+    }
+    
+    private func setDataSource() {
+        dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView, cellProvider: { [weak self] collectionView, indexPath, viewModel in
             switch Section(rawValue: indexPath.section) {
             case .banner:
-                guard let viewModel = viewModel as? HomeBannerCollectionViewCellViewModel,
-                      let cell: HomeBannerCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBannerCollectionViewCell", for: indexPath) as? HomeBannerCollectionViewCell else { return .init() }
+                return self?.bannerCell(collectionView, indexPath, viewModel)
                 
-                cell.setViewModel(viewModel)
-                return cell
-                
-            case .horizontalProductItem:
-                guard let viewModel = viewModel as? HomeProductCollectionViewCellViewModel,
-                      let cell: HomeProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeProductCollectionViewCell", for: indexPath) as? HomeProductCollectionViewCell else { return .init() }
-                
-                cell.setViewModel(viewModel)
-                return cell
+            case .horizontalProductItem, .verticalProductItem:
+                return self?.productItemCell(collectionView, indexPath, viewModel)
                 
             case .none:
                 return .init()
             }
-            
         })
-        
+    }
+    
+    private func applySnapshot() {
         var snapshot: NSDiffableDataSourceSnapshot<Section, AnyHashable> = NSDiffableDataSourceSnapshot<Section, AnyHashable>()
-        snapshot.appendSections([.banner])
-        snapshot.appendItems([
-            HomeBannerCollectionViewCellViewModel(bannerImage: UIImage.slide1),
-            HomeBannerCollectionViewCellViewModel(bannerImage: UIImage.slide2),
-            HomeBannerCollectionViewCellViewModel(bannerImage: UIImage.slide3)
-        ], toSection: .banner)
+        if let bannerViewModels = viewModel.bannerViewModels {
+            snapshot.appendSections([.banner])
+            snapshot.appendItems(bannerViewModels, toSection: .banner)
+        }
         
-        snapshot.appendSections([.horizontalProductItem])
-        snapshot.appendItems([
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "playstation1", reasonDiscountString: "쿠폰 할인", originalPrice: "100,000", discountPrice: "80,000"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "playstation2", reasonDiscountString: "쿠폰 할인", originalPrice: "200,000", discountPrice: "10,000"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "playstation3", reasonDiscountString: "쿠폰 할인", originalPrice: "300,000", discountPrice: "20,000"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "playstation4", reasonDiscountString: "쿠폰 할인", originalPrice: "400,000", discountPrice: "30,000"),
-            HomeProductCollectionViewCellViewModel(imageUrlString: "", title: "playstation5", reasonDiscountString: "쿠폰 할인", originalPrice: "500,000", discountPrice: "40,000")
-        ], toSection: .horizontalProductItem)
+        if let horizontalProductViewModels = viewModel.horizontalProductViewModels {
+            snapshot.appendSections([.horizontalProductItem])
+            snapshot.appendItems(horizontalProductViewModels, toSection: .horizontalProductItem)
+        }
+        
+        if let verticalProductViewModels = viewModel.verticalProductViewModels {
+            snapshot.appendSections([.verticalProductItem])
+            snapshot.appendItems(verticalProductViewModels, toSection: .verticalProductItem)
+        }
         dataSource?.apply(snapshot)
+    }
+    
+    private func bannerCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
+        guard let viewModel = viewModel as? HomeBannerCollectionViewCellViewModel,
+              let cell: HomeBannerCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeBannerCollectionViewCell", for: indexPath) as? HomeBannerCollectionViewCell else { return .init() }
         
-        collectionView.collectionViewLayout = compositionalLayout
+        cell.setViewModel(viewModel)
+        return cell
+    }
+    
+    private func productItemCell(_ collectionView: UICollectionView, _ indexPath: IndexPath, _ viewModel: AnyHashable) -> UICollectionViewCell {
+        guard let viewModel = viewModel as? HomeProductCollectionViewCellViewModel,
+              let cell: HomeProductCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeProductCollectionViewCell", for: indexPath) as? HomeProductCollectionViewCell else { return .init() }
+        
+        cell.setViewModel(viewModel)
+        return cell
     }
 }
 
