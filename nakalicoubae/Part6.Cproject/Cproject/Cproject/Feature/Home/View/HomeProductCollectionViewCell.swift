@@ -16,17 +16,18 @@ struct HomeProductCollectionViewCellViewModel: Hashable {
     let discountPrice: String
 }
 
-class HomeProductCollectionViewCell: UICollectionViewCell {
+final class HomeProductCollectionViewCell: UICollectionViewCell {
+    static let reusableId: String = "HomeProductCollectionViewCell"
     
-    @IBOutlet weak var productItemImageView: UIImageView! {
+    @IBOutlet private weak var productItemImageView: UIImageView! {
         didSet {
             productItemImageView.layer.cornerRadius = 5
         }
     }
-    @IBOutlet weak var productTitleLabel: UILabel!
-    @IBOutlet weak var productReasonDiscountLabel: UILabel!
-    @IBOutlet weak var originalPriceLabel: UILabel!
-    @IBOutlet weak var discountPriceLabel: UILabel!
+    @IBOutlet private weak var productTitleLabel: UILabel!
+    @IBOutlet private weak var productReasonDiscountLabel: UILabel!
+    @IBOutlet private weak var originalPriceLabel: UILabel!
+    @IBOutlet private weak var discountPriceLabel: UILabel!
     
     func setViewModel(_ viewModel: HomeProductCollectionViewCellViewModel) {
         productItemImageView.kf.setImage(with: URL(string: viewModel.imageUrlString))
@@ -47,7 +48,7 @@ extension HomeProductCollectionViewCell {
         
         let section: NSCollectionLayoutSection = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = .init(top: 20, leading: 33, bottom: 0, trailing: 33)
+        section.contentInsets = .init(top: 40, leading: 33, bottom: 0, trailing: 33)
         section.interGroupSpacing = 10
         return section
     }
@@ -63,6 +64,7 @@ extension HomeProductCollectionViewCell {
         let section: NSCollectionLayoutSection = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .none
         section.contentInsets = .init(top: 20, leading: 19 - 2.5, bottom: 0, trailing: 19 - 2.5)
+        section.interGroupSpacing = 10
         return section
     }
 }

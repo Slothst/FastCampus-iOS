@@ -8,6 +8,9 @@
 import UIKit
 
 enum CPImage {
+    static var buttonComplete: UIImage = UIImage.btnComplete
+    static var buttonActivate: UIImage = UIImage.btnActivate
+    
     static var topBtn: UIImage = .topBtn
     static var home: UIImage = .home
     static var left: UIImage = .left

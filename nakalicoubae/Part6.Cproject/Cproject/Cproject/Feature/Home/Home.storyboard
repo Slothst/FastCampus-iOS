@@ -29,14 +29,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeBannerCollectionViewCell" id="MKd-v7-5Gb" customClass="HomeBannerCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
+                                        <rect key="frame" x="0.0" y="45.666666666666664" width="108" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="muu-dR-9ZL">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="108" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kx4-QK-jYd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="108" height="115"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -46,56 +46,56 @@
                                                 <constraint firstAttribute="trailing" secondItem="kx4-QK-jYd" secondAttribute="trailing" id="pqH-QC-Pr7"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="393" height="192"/>
+                                        <size key="customSize" width="108" height="115"/>
                                         <connections>
                                             <outlet property="imageView" destination="kx4-QK-jYd" id="ed0-wh-toS"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeProductCollectionViewCell" id="WiE-RK-cgI" customClass="HomeProductCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="76.666666666666671" y="202" width="240" height="331.33333333333326"/>
+                                        <rect key="frame" x="129" y="17" width="146" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rI7-LL-vXR">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="331.33333333333326"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="MIX-2G-xcw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="331.33333333333331"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="172"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pwC-ku-QP7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="146"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="pwC-ku-QP7" secondAttribute="height" multiplier="1:1" id="sC3-U8-uKx"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="x49-hp-So5">
-                                                            <rect key="frame" x="0.0" y="252.00000000000003" width="240" height="79.333333333333343"/>
+                                                            <rect key="frame" x="0.0" y="158" width="146" height="14"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0r-YX-Mlx">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="0.0"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <color key="textColor" name="bk"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JYg-qp-8ku">
-                                                                    <rect key="frame" x="0.0" y="30.000000000000004" width="240" height="49.333333333333343"/>
+                                                                    <rect key="frame" x="0.0" y="13" width="146" height="1"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghk-1k-7Qh">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="12"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="0.0"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                             <color key="textColor" name="key-color-red-2"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-0w-rqa">
-                                                                            <rect key="frame" x="0.0" y="17.000000000000004" width="240" height="32.333333333333343"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Laz-0w-rqa">
+                                                                            <rect key="frame" x="0.0" y="1" width="146" height="0.0"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgr-M5-w14">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="14.333333333333334"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="0.0"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                                                     <color key="textColor" name="gray5"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3z-qH-Gr3">
-                                                                                    <rect key="frame" x="0.0" y="15.333333333333314" width="240" height="17"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3z-qH-Gr3">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="0.0"/>
                                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                                                     <color key="textColor" name="key-color-red"/>
                                                                                     <nil key="highlightedColor"/>
@@ -116,6 +116,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="MIX-2G-xcw" secondAttribute="bottom" id="yL6-ka-mbN"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="146" height="172"/>
                                         <connections>
                                             <outlet property="discountPriceLabel" destination="d3z-qH-Gr3" id="N7M-c8-Yyv"/>
                                             <outlet property="originalPriceLabel" destination="Dgr-M5-w14" id="9oz-ne-EvF"/>
@@ -123,6 +124,42 @@
                                             <outlet property="productReasonDiscountLabel" destination="Ghk-1k-7Qh" id="Rtz-SU-YKO"/>
                                             <outlet property="productTitleLabel" destination="k0r-YX-Mlx" id="6Ut-ps-OeK"/>
                                         </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCouponButtonCollectionViewCell" id="9V6-Ep-5VI" customClass="HomeCouponButtonCollectionViewCell" customModule="Cproject" customModuleProvider="target">
+                                        <rect key="frame" x="296" y="0.0" width="97" height="206"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m1g-av-7Eb">
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="206"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPq-Ip-8Rv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="206"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <action selector="didTapCouponButton:" destination="9V6-Ep-5VI" eventType="touchUpInside" id="WWS-qM-XHo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bPq-Ip-8Rv" firstAttribute="top" secondItem="m1g-av-7Eb" secondAttribute="top" id="5CJ-gw-kfL"/>
+                                                <constraint firstAttribute="bottom" secondItem="bPq-Ip-8Rv" secondAttribute="bottom" id="Exi-qD-fBh"/>
+                                                <constraint firstAttribute="trailing" secondItem="bPq-Ip-8Rv" secondAttribute="trailing" id="WOF-07-5Ia"/>
+                                                <constraint firstItem="bPq-Ip-8Rv" firstAttribute="leading" secondItem="m1g-av-7Eb" secondAttribute="leading" id="hCX-Fq-65o"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="97" height="206"/>
+                                        <connections>
+                                            <outlet property="couponButton" destination="bPq-Ip-8Rv" id="tcx-kF-heH"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeSeparateLineCollectionViewCell" id="nd8-ED-kSb" customClass="HomeSeparateLineCollectionViewCell" customModule="Cproject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="216" width="393" height="192"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hkj-4u-MGF">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
