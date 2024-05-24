@@ -23,13 +23,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0og-Iz-aCh">
                                     <size key="itemSize" width="393" height="192"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeBannerCollectionViewCell" id="MKd-v7-5Gb" customClass="HomeBannerCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="45.666666666666664" width="108" height="115"/>
+                                        <rect key="frame" x="0.0" y="95.666666666666671" width="108" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="muu-dR-9ZL">
                                             <rect key="frame" x="0.0" y="0.0" width="108" height="115"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeProductCollectionViewCell" id="WiE-RK-cgI" customClass="HomeProductCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="129" y="17" width="146" height="172"/>
+                                        <rect key="frame" x="129" y="67" width="146" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rI7-LL-vXR">
                                             <rect key="frame" x="0.0" y="0.0" width="146" height="172"/>
@@ -126,7 +126,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCouponButtonCollectionViewCell" id="9V6-Ep-5VI" customClass="HomeCouponButtonCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="296" y="0.0" width="97" height="206"/>
+                                        <rect key="frame" x="296" y="50" width="97" height="206"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="m1g-av-7Eb">
                                             <rect key="frame" x="0.0" y="0.0" width="97" height="206"/>
@@ -154,14 +154,57 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeSeparateLineCollectionViewCell" id="nd8-ED-kSb" customClass="HomeSeparateLineCollectionViewCell" customModule="Cproject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="216" width="393" height="192"/>
+                                        <rect key="frame" x="0.0" y="266" width="393" height="192"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hkj-4u-MGF">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeThemeCollectionViewCell" id="mVW-pV-KJ3" customClass="HomeThemeCollectionViewCell" customModule="Cproject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="468" width="393" height="192"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5ze-H1-r84">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G01-xp-ITf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="192"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="G01-xp-ITf" secondAttribute="trailing" id="0nQ-lM-6eq"/>
+                                                <constraint firstItem="G01-xp-ITf" firstAttribute="leading" secondItem="5ze-H1-r84" secondAttribute="leading" id="ABc-lK-VLD"/>
+                                                <constraint firstAttribute="bottom" secondItem="G01-xp-ITf" secondAttribute="bottom" id="Ewo-W0-GEz"/>
+                                                <constraint firstItem="G01-xp-ITf" firstAttribute="top" secondItem="5ze-H1-r84" secondAttribute="top" id="QLx-fp-sTc"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="themeImageView" destination="G01-xp-ITf" id="aLt-CK-bO8"/>
+                                        </connections>
+                                    </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeThemeHeaderCollectionReusableView" id="Z8p-UL-KSE" customClass="HomeThemeHeaderCollectionReusableView" customModule="Cproject" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh9-at-P3j">
+                                            <rect key="frame" x="30" y="23" width="333" height="27"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <color key="textColor" name="bk"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Rh9-at-P3j" firstAttribute="leading" secondItem="Z8p-UL-KSE" secondAttribute="leading" constant="30" id="IFz-RT-HyH"/>
+                                        <constraint firstAttribute="trailing" secondItem="Rh9-at-P3j" secondAttribute="trailing" constant="30" id="VIO-RB-iCD"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rh9-at-P3j" secondAttribute="bottom" id="r0Q-VQ-WwH"/>
+                                        <constraint firstItem="Rh9-at-P3j" firstAttribute="top" secondItem="Z8p-UL-KSE" secondAttribute="top" constant="23" id="zKM-p2-rz3"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="themeHeaderLabel" destination="Rh9-at-P3j" id="q4L-Lp-RNG"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
