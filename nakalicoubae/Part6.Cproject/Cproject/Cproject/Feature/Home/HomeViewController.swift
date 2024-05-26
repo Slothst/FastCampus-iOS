@@ -123,8 +123,6 @@ final class HomeViewController: UIViewController {
         if let horizontalProductViewModels = viewModel.state.collectionViewModels.horizontalProductViewModels {
             snapshot.appendSections([.horizontalProductItem])
             snapshot.appendItems(horizontalProductViewModels, toSection: .horizontalProductItem)
-            
-            
         }
         
         if let couponViewModels = viewModel.state.collectionViewModels.couponState {
@@ -185,6 +183,13 @@ final class HomeViewController: UIViewController {
         
         cell.setViewModel(viewModel)
         return cell
+    }
+    
+    @IBAction func favoriteButtonAction(_ sender: Any) {
+        let favoriteStoryboard: UIStoryboard = UIStoryboard(name: "Favorite", bundle: nil)
+        if let favoriteViewController = favoriteStoryboard.instantiateInitialViewController() {
+            navigationController?.pushViewController(favoriteViewController, animated: true)
+        }
     }
 }
 
