@@ -34,6 +34,9 @@
 		255B29912C04B2A400A4AAFA /* DetailPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B29902C04B2A400A4AAFA /* DetailPurchaseView.swift */; };
 		255B29932C04B75000A4AAFA /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 255B29922C04B75000A4AAFA /* Detail.storyboard */; };
 		255B29952C04B76200A4AAFA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B29942C04B76200A4AAFA /* DetailViewController.swift */; };
+		255B29992C04B9CC00A4AAFA /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B29982C04B9CC00A4AAFA /* OptionViewController.swift */; };
+		255B299B2C04B9D400A4AAFA /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B299A2C04B9D400A4AAFA /* OptionViewModel.swift */; };
+		255B299D2C04B9EB00A4AAFA /* OptionRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B299C2C04B9EB00A4AAFA /* OptionRootView.swift */; };
 		257DC6902BFB5EFC009CE3D3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 257DC68F2BFB5EFC009CE3D3 /* Lottie */; };
 		257DC6932BFB604C009CE3D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257DC6922BFB604C009CE3D3 /* Images.xcassets */; };
 		257DC6952BFB6241009CE3D3 /* CPImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DC6942BFB6241009CE3D3 /* CPImage.swift */; };
@@ -78,6 +81,9 @@
 		255B29902C04B2A400A4AAFA /* DetailPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPurchaseView.swift; sourceTree = "<group>"; };
 		255B29922C04B75000A4AAFA /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		255B29942C04B76200A4AAFA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		255B29982C04B9CC00A4AAFA /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		255B299A2C04B9D400A4AAFA /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
+		255B299C2C04B9EB00A4AAFA /* OptionRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionRootView.swift; sourceTree = "<group>"; };
 		257DC6922BFB604C009CE3D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		257DC6942BFB6241009CE3D3 /* CPImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPImage.swift; sourceTree = "<group>"; };
 		257DC6962BFB63BD009CE3D3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -194,6 +200,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		255B29962C04B9AB00A4AAFA /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				255B29982C04B9CC00A4AAFA /* OptionViewController.swift */,
+				255B299A2C04B9D400A4AAFA /* OptionViewModel.swift */,
+				255B299C2C04B9EB00A4AAFA /* OptionRootView.swift */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
 		257DC6912BFB6025009CE3D3 /* DesignSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,9 +225,10 @@
 		257DC6A02BFDFB03009CE3D3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				255B297E2C049F8100A4AAFA /* Detail */,
 				257DC6A12BFDFB08009CE3D3 /* Splash */,
 				257DC6A22BFDFB0D009CE3D3 /* Home */,
+				255B297E2C049F8100A4AAFA /* Detail */,
+				255B29962C04B9AB00A4AAFA /* Option */,
 				255B296E2C02DC0400A4AAFA /* Favorite */,
 			);
 			path = Feature;
@@ -363,6 +380,7 @@
 			files = (
 				255B29742C02DC5A00A4AAFA /* FavoriteViewModel.swift in Sources */,
 				25AE5B202BF9FCAE00697990 /* AppDelegate.swift in Sources */,
+				255B299D2C04B9EB00A4AAFA /* OptionRootView.swift in Sources */,
 				255B29622BFF2B3300A4AAFA /* HomeViewModel.swift in Sources */,
 				255B295C2BFF264800A4AAFA /* HomeResponse.swift in Sources */,
 				255B298D2C04A9EB00A4AAFA /* DetailPriceView.swift in Sources */,
@@ -374,6 +392,7 @@
 				257DC6952BFB6241009CE3D3 /* CPImage.swift in Sources */,
 				255B29912C04B2A400A4AAFA /* DetailPurchaseView.swift in Sources */,
 				255B296D2C006F9000A4AAFA /* HomeThemeHeaderCollectionReusableView.swift in Sources */,
+				255B299B2C04B9D400A4AAFA /* OptionViewModel.swift in Sources */,
 				255B29812C049FA800A4AAFA /* DetailRootView.swift in Sources */,
 				255B29872C04A34000A4AAFA /* DetailBannerView.swift in Sources */,
 				25AE5B222BF9FCAE00697990 /* SceneDelegate.swift in Sources */,
@@ -393,6 +412,7 @@
 				257DC6A72BFF1215009CE3D3 /* HomeProductCollectionViewCell.swift in Sources */,
 				255B29852C04A0E800A4AAFA /* ProductDetailResponse.swift in Sources */,
 				255B29892C04A5C100A4AAFA /* DetailRateView.swift in Sources */,
+				255B29992C04B9CC00A4AAFA /* OptionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
