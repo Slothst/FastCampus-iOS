@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2531DCED2C05FD32000C9CF8 /* PurchaseSelectedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2531DCEC2C05FD32000C9CF8 /* PurchaseSelectedItemView.swift */; };
 		2531DCF02C062532000C9CF8 /* PurchaseRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2531DCEF2C062532000C9CF8 /* PurchaseRootView.swift */; };
+		2531DCF32C062892000C9CF8 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2531DCF22C062892000C9CF8 /* PaymentViewController.swift */; };
+		2531DCF52C0628AA000C9CF8 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2531DCF42C0628AA000C9CF8 /* PaymentViewModel.swift */; };
+		2531DCF72C062E51000C9CF8 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 2531DCF62C062E51000C9CF8 /* test.html */; };
 		25436C222C05F0ED00A336CF /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25436C212C05F0ED00A336CF /* PurchaseViewController.swift */; };
 		25436C242C05F0F400A336CF /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25436C232C05F0F400A336CF /* PurchaseViewModel.swift */; };
 		255B29592BFF254800A4AAFA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255B29582BFF254800A4AAFA /* NetworkService.swift */; };
@@ -61,6 +64,9 @@
 /* Begin PBXFileReference section */
 		2531DCEC2C05FD32000C9CF8 /* PurchaseSelectedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseSelectedItemView.swift; sourceTree = "<group>"; };
 		2531DCEF2C062532000C9CF8 /* PurchaseRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRootView.swift; sourceTree = "<group>"; };
+		2531DCF22C062892000C9CF8 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		2531DCF42C0628AA000C9CF8 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		2531DCF62C062E51000C9CF8 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		25436C212C05F0ED00A336CF /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		25436C232C05F0F400A336CF /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 		255B29582BFF254800A4AAFA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -129,6 +135,15 @@
 				2531DCEF2C062532000C9CF8 /* PurchaseRootView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2531DCF12C062882000C9CF8 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				2531DCF22C062892000C9CF8 /* PaymentViewController.swift */,
+				2531DCF42C0628AA000C9CF8 /* PaymentViewModel.swift */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		25436C202C05F0E100A336CF /* Purchase */ = {
@@ -252,6 +267,7 @@
 		257DC6A02BFDFB03009CE3D3 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2531DCF12C062882000C9CF8 /* Payment */,
 				25436C202C05F0E100A336CF /* Purchase */,
 				257DC6A12BFDFB08009CE3D3 /* Splash */,
 				257DC6A22BFDFB0D009CE3D3 /* Home */,
@@ -318,6 +334,7 @@
 				255B295A2BFF264000A4AAFA /* Model */,
 				257DC6A02BFDFB03009CE3D3 /* Feature */,
 				25AE5B2D2BF9FCB200697990 /* Info.plist */,
+				2531DCF62C062E51000C9CF8 /* test.html */,
 			);
 			path = Cproject;
 			sourceTree = "<group>";
@@ -396,6 +413,7 @@
 				25AE5B2C2BF9FCB200697990 /* Base in Resources */,
 				257DC6972BFB63BD009CE3D3 /* Colors.xcassets in Resources */,
 				25AE5B342BF9FE2C00697990 /* Splash.storyboard in Resources */,
+				2531DCF72C062E51000C9CF8 /* test.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +451,7 @@
 				257DC6A52BFDFD1D009CE3D3 /* HomeBannerCollectionViewCell.swift in Sources */,
 				255B297B2C02F70A00A4AAFA /* PurchaseButton.swift in Sources */,
 				255B29722C02DC3900A4AAFA /* FavoriteViewController.swift in Sources */,
+				2531DCF32C062892000C9CF8 /* PaymentViewController.swift in Sources */,
 				255B298B2C04A7D500A4AAFA /* DetailOptionView.swift in Sources */,
 				255B29652BFF36EC00A4AAFA /* Numeric+Extension.swift in Sources */,
 				25AE5B362BF9FE6F00697990 /* SplashViewController.swift in Sources */,
@@ -442,6 +461,7 @@
 				255B29782C02DE9900A4AAFA /* Product.swift in Sources */,
 				255B29692C0064AF00A4AAFA /* HomeSeparateLineCollectionViewCell.swift in Sources */,
 				257DC6A72BFF1215009CE3D3 /* HomeProductCollectionViewCell.swift in Sources */,
+				2531DCF52C0628AA000C9CF8 /* PaymentViewModel.swift in Sources */,
 				255B29852C04A0E800A4AAFA /* ProductDetailResponse.swift in Sources */,
 				255B29892C04A5C100A4AAFA /* DetailRateView.swift in Sources */,
 				255B29992C04B9CC00A4AAFA /* OptionViewController.swift in Sources */,
