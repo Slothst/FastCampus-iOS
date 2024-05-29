@@ -116,32 +116,58 @@ final class HomeViewController: UIViewController {
     
     private func applySnapshot() {
         var snapshot: Snapshot = Snapshot()
-        if let bannerViewModels = viewModel.state.collectionViewModels.bannerViewModels {
-            snapshot.appendSections([.banner])
-            snapshot.appendItems(bannerViewModels, toSection: .banner)
+        func setTheme() {
+            if let themeViewModels = viewModel.state.collectionViewModels.themeViewModels?.items {
+                snapshot.appendSections([.separateLine2])
+                snapshot.appendItems(viewModel.state.collectionViewModels.separateLine2ViewModels, toSection: .separateLine2)
+                
+                snapshot.appendSections([.theme])
+                snapshot.appendItems(themeViewModels, toSection: .theme)
+            }
         }
         
-        if let horizontalProductViewModels = viewModel.state.collectionViewModels.horizontalProductViewModels {
-            snapshot.appendSections([.horizontalProductItem])
-            snapshot.appendItems(horizontalProductViewModels, toSection: .horizontalProductItem)
+        func setVerticalProduct() {
+            if let verticalProductViewModels = viewModel.state.collectionViewModels.verticalProductViewModels {
+                snapshot.appendSections([.verticalProductItem])
+                snapshot.appendItems(verticalProductViewModels, toSection: .verticalProductItem)
+            }
         }
         
-        if let couponViewModels = viewModel.state.collectionViewModels.couponState {
-            snapshot.appendSections([.couponButton])
-            snapshot.appendItems(couponViewModels, toSection: .couponButton)
+        func setCoupon() {
+            if let couponViewModels = viewModel.state.collectionViewModels.couponState {
+                snapshot.appendSections([.couponButton])
+                snapshot.appendItems(couponViewModels, toSection: .couponButton)
+            }
         }
         
-        if let verticalProductViewModels = viewModel.state.collectionViewModels.verticalProductViewModels {
-            snapshot.appendSections([.verticalProductItem])
-            snapshot.appendItems(verticalProductViewModels, toSection: .verticalProductItem)
+        func setHorizontalProduct() {
+            if let horizontalProductViewModels = viewModel.state.collectionViewModels.horizontalProductViewModels {
+                snapshot.appendSections([.horizontalProductItem])
+                snapshot.appendItems(horizontalProductViewModels, toSection: .horizontalProductItem)
+            }
         }
         
-        if let themeViewModels = viewModel.state.collectionViewModels.themeViewModels?.items {
-            snapshot.appendSections([.separateLine2])
-            snapshot.appendItems(viewModel.state.collectionViewModels.separateLine2ViewModels, toSection: .separateLine2)
-            
-            snapshot.appendSections([.theme])
-            snapshot.appendItems(themeViewModels, toSection: .theme)
+        func setBanner() {
+            if let bannerViewModels = viewModel.state.collectionViewModels.bannerViewModels {
+                snapshot.appendSections([.banner])
+                snapshot.appendItems(bannerViewModels, toSection: .banner)
+            }
+        }
+        
+        viewModel.state.sort.forEach {
+            switch $0 {
+            case "banner":
+                setBanner()
+            case "horizontal":
+                setHorizontalProduct()
+            case "coupon":
+                setCoupon()
+            case "vertical":
+                setVerticalProduct()
+            case "theme":
+                setTheme()
+            default: break
+            }
         }
         dataSource.apply(snapshot)
     }
