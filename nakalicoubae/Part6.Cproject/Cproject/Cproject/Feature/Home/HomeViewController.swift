@@ -37,7 +37,7 @@ final class HomeViewController: UIViewController {
         
         bindingViewModel()
         collectionView.collectionViewLayout = compositionalLayout
-        collectionView.delegate = self
+        collectionView.delegate = self 
         
         viewModel.process(action: .loadData)
         viewModel.process(action: .loadCoupon)
