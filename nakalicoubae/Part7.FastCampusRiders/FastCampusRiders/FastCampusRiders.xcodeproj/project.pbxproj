@@ -25,11 +25,12 @@
 		25C1E6122C0C481000632AB2 /* OrderCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6112C0C481000632AB2 /* OrderCompletionViewModel.swift */; };
 		25C1E6142C0C481A00632AB2 /* OrderCompletionViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6132C0C481A00632AB2 /* OrderCompletionViewInteractor.swift */; };
 		25C1E6172C0C591C00632AB2 /* SSO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C1E6162C0C591C00632AB2 /* SSO.storyboard */; };
-		25C1E61A2C0C5D1000632AB2 /* IssueTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6192C0C5D1000632AB2 /* IssueTokenInfo.swift */; };
 		25C1E61C2C0C5D8600632AB2 /* RefreshTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E61B2C0C5D8600632AB2 /* RefreshTokenInfo.swift */; };
 		25C1E61E2C0C5DDA00632AB2 /* SSOUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E61D2C0C5DDA00632AB2 /* SSOUserInfo.swift */; };
 		25C1E6202C0C5E3400632AB2 /* SSOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E61F2C0C5E3400632AB2 /* SSOController.swift */; };
 		25C1E6232C0C5F0300632AB2 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 25C1E6222C0C5F0300632AB2 /* KeychainAccess */; };
+		25C1E6252C0C68F800632AB2 /* SSOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6242C0C68F800632AB2 /* SSOViewController.swift */; };
+		25C1E6272C0C915000632AB2 /* IssueTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6262C0C915000632AB2 /* IssueTokenInfo.swift */; };
 		C355C4972AD10837002F0705 /* FCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355C4962AD10837002F0705 /* FCConstants.swift */; };
 		FE10192C2AB13F270091C91C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10192B2AB13F270091C91C /* APIController.swift */; };
 		FE1019B42AB2D2940091C91C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1019B32AB2D2940091C91C /* ArrayExtension.swift */; };
@@ -82,10 +83,11 @@
 		25C1E6112C0C481000632AB2 /* OrderCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewModel.swift; sourceTree = "<group>"; };
 		25C1E6132C0C481A00632AB2 /* OrderCompletionViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewInteractor.swift; sourceTree = "<group>"; };
 		25C1E6162C0C591C00632AB2 /* SSO.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SSO.storyboard; sourceTree = "<group>"; };
-		25C1E6192C0C5D1000632AB2 /* IssueTokenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTokenInfo.swift; sourceTree = "<group>"; };
 		25C1E61B2C0C5D8600632AB2 /* RefreshTokenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenInfo.swift; sourceTree = "<group>"; };
 		25C1E61D2C0C5DDA00632AB2 /* SSOUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOUserInfo.swift; sourceTree = "<group>"; };
 		25C1E61F2C0C5E3400632AB2 /* SSOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOController.swift; sourceTree = "<group>"; };
+		25C1E6242C0C68F800632AB2 /* SSOViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOViewController.swift; sourceTree = "<group>"; };
+		25C1E6262C0C915000632AB2 /* IssueTokenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTokenInfo.swift; sourceTree = "<group>"; };
 		C355C4962AD10837002F0705 /* FCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstants.swift; sourceTree = "<group>"; };
 		FE10192B2AB13F270091C91C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		FE1019B32AB2D2940091C91C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				25C1E6182C0C5D0300632AB2 /* Entity */,
 				25C1E61F2C0C5E3400632AB2 /* SSOController.swift */,
+				25C1E6242C0C68F800632AB2 /* SSOViewController.swift */,
 				25C1E6162C0C591C00632AB2 /* SSO.storyboard */,
 			);
 			path = SSO;
@@ -176,9 +179,9 @@
 		25C1E6182C0C5D0300632AB2 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				25C1E6192C0C5D1000632AB2 /* IssueTokenInfo.swift */,
 				25C1E61B2C0C5D8600632AB2 /* RefreshTokenInfo.swift */,
 				25C1E61D2C0C5DDA00632AB2 /* SSOUserInfo.swift */,
+				25C1E6262C0C915000632AB2 /* IssueTokenInfo.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				25C1E5FC2C0991FE00632AB2 /* OrderDetailViewInteractor.swift in Sources */,
 				FED5A4812AC2C5150050F24D /* OrderCompletionViewController.swift in Sources */,
 				FED5A4772AC26CF40050F24D /* OrderDetailMemoCell.swift in Sources */,
+				25C1E6252C0C68F800632AB2 /* SSOViewController.swift in Sources */,
 				25C1E6042C09B8D500632AB2 /* MapManager.swift in Sources */,
 				25C1E61C2C0C5D8600632AB2 /* RefreshTokenInfo.swift in Sources */,
 				FED5A4732AC262C30050F24D /* OrderDetailContactCell.swift in Sources */,
@@ -439,7 +443,6 @@
 				FED5A4712AC25FD20050F24D /* OrderDetailTitleCell.swift in Sources */,
 				FED5A47F2AC2BEA80050F24D /* OrderListTableViewCell.swift in Sources */,
 				25C1E6122C0C481000632AB2 /* OrderCompletionViewModel.swift in Sources */,
-				25C1E61A2C0C5D1000632AB2 /* IssueTokenInfo.swift in Sources */,
 				25C1E6102C0C43B400632AB2 /* OrderTrackingViewInteractor.swift in Sources */,
 				FE9AD8102ABD4E5300535B47 /* OrderDetailDescriptionCell.swift in Sources */,
 				25C1E5F12C08BDFC00632AB2 /* OrderListViewInteractor.swift in Sources */,
@@ -455,6 +458,7 @@
 				FEE5277F2AC6A8FF00BC682F /* PhotoManager.swift in Sources */,
 				FED5A4752AC263F20050F24D /* LocationDetailInfo.swift in Sources */,
 				FE19AF1C2AA9578E00FE09A8 /* LocationManager.swift in Sources */,
+				25C1E6272C0C915000632AB2 /* IssueTokenInfo.swift in Sources */,
 				25C1E60E2C0C411600632AB2 /* OrderTrackingViewModel.swift in Sources */,
 				FE19AEF82AA6C0EE00FE09A8 /* AppDelegate.swift in Sources */,
 				25C1E60C2C09BCCF00632AB2 /* MapNaverDirections.swift in Sources */,

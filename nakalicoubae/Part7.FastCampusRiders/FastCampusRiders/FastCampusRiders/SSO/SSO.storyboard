@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="SSOViewController" customModule="FastCampusRiders" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,15 @@
                                     <constraint firstAttribute="width" constant="110" id="xyM-xb-bqV"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6P-zf-Xhq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9Z-zy-Bc1">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                <connections>
+                                    <action selector="dismissKeyboard" destination="Y6W-OH-hqX" eventType="touchDown" id="Kvh-p9-aZe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6P-zf-Xhq">
                                 <rect key="frame" x="46.666666666666657" y="664" width="300" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="B5m-8T-l96"/>
@@ -32,8 +40,11 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Single Sign On"/>
+                                <connections>
+                                    <action selector="touchSSOButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YeA-xe-fvq"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nND-Pf-yp3">
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nND-Pf-yp3">
                                 <rect key="frame" x="81.666666666666686" y="464" width="230" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="230" id="S5M-jG-orh"/>
@@ -41,7 +52,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8t-ch-spy">
+                            <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8t-ch-spy">
                                 <rect key="frame" x="81.666666666666686" y="538" width="230" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -52,20 +63,29 @@
                         <constraints>
                             <constraint firstItem="N8t-ch-spy" firstAttribute="width" secondItem="nND-Pf-yp3" secondAttribute="width" id="4vI-ke-Wed"/>
                             <constraint firstItem="nND-Pf-yp3" firstAttribute="top" secondItem="e9J-lY-Sy3" secondAttribute="bottom" constant="100" id="9Ba-VV-5jB"/>
+                            <constraint firstItem="c9Z-zy-Bc1" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="9vx-51-dl9"/>
+                            <constraint firstItem="c9Z-zy-Bc1" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AtB-Ft-ftZ"/>
                             <constraint firstItem="P6P-zf-Xhq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="N8t-ch-spy" secondAttribute="bottom" constant="30" id="CqT-I7-f4z"/>
+                            <constraint firstAttribute="bottom" secondItem="c9Z-zy-Bc1" secondAttribute="bottom" id="Kni-OG-e8j"/>
                             <constraint firstItem="e9J-lY-Sy3" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-94" id="Kwv-jP-O7Z"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="P6P-zf-Xhq" secondAttribute="bottom" constant="115" id="Wcs-pE-Oiw"/>
                             <constraint firstItem="e9J-lY-Sy3" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Yl7-93-6l3"/>
                             <constraint firstItem="P6P-zf-Xhq" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="cfV-md-v0Y"/>
                             <constraint firstItem="N8t-ch-spy" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="eVc-YQ-Vc5"/>
                             <constraint firstItem="N8t-ch-spy" firstAttribute="top" secondItem="nND-Pf-yp3" secondAttribute="bottom" constant="40" id="gI5-GM-nFt"/>
+                            <constraint firstItem="c9Z-zy-Bc1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="l3D-VK-RVf"/>
                             <constraint firstItem="nND-Pf-yp3" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rZC-Xi-h5O"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="N8t-ch-spy" id="VXJ-Nr-ZqJ"/>
+                        <outlet property="ssoButton" destination="P6P-zf-Xhq" id="yb4-V0-PQg"/>
+                        <outlet property="userNameField" destination="nND-Pf-yp3" id="YfF-9R-1EG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
     </scenes>
     <resources>
