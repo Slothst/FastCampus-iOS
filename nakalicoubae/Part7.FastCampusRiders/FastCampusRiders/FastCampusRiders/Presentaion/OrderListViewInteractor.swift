@@ -121,9 +121,9 @@ extension OrderListViewInteractor {
             OrderListInfo(title: "대기중 \(pendingOrderListDelegate.dataList.count)",
                           orderListDelegate: pendingOrderListDelegate),
             OrderListInfo(title: "진행 \(deliveringOrderListDelegate.dataList.count)",
-                          orderListDelegate: pendingOrderListDelegate),
+                          orderListDelegate: deliveringOrderListDelegate),
             OrderListInfo(title: "완료 \(completedOrderListDelegate.dataList.count)",
-                          orderListDelegate: pendingOrderListDelegate)
+                          orderListDelegate: completedOrderListDelegate)
         ]
         
         self.orderListDelegate.forEach { listInfo in

@@ -11,7 +11,7 @@ import Foundation
 protocol DirectionsAvailable {
     static var canOpen: Bool { get }
     var appName: String { get }
-    func openAppToGetDirections(with coordinates: CLLocationCoordinate2D, name: String?) 
+    func openAppToGetDirections(with coordinates: CLLocationCoordinate2D, name: String?)
 }
 
 enum MapManager: CaseIterable {

@@ -39,6 +39,17 @@ class OrderDetailViewController: UITableViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? OrderTrackingViewController,
+                  let orderInfo = sender as? OrderDetailInfo {
+            vc.set(orderInfo: orderInfo)
+        }
+//        if let vc = segue.destination as? OrderCompletionViewController,
+//           let orderID = sender as? String {
+//            vc.set(orderID: orderID)
+//        } else
+    }
+    
     func set(orderID: String) {
         self.orderID = orderID
     }
