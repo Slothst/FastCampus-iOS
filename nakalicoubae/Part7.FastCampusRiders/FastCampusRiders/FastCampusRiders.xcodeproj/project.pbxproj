@@ -24,6 +24,7 @@
 		25C1E6102C0C43B400632AB2 /* OrderTrackingViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E60F2C0C43B400632AB2 /* OrderTrackingViewInteractor.swift */; };
 		25C1E6122C0C481000632AB2 /* OrderCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6112C0C481000632AB2 /* OrderCompletionViewModel.swift */; };
 		25C1E6142C0C481A00632AB2 /* OrderCompletionViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6132C0C481A00632AB2 /* OrderCompletionViewInteractor.swift */; };
+		25C1E6172C0C591C00632AB2 /* SSO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C1E6162C0C591C00632AB2 /* SSO.storyboard */; };
 		C355C4972AD10837002F0705 /* FCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355C4962AD10837002F0705 /* FCConstants.swift */; };
 		FE10192C2AB13F270091C91C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10192B2AB13F270091C91C /* APIController.swift */; };
 		FE1019B42AB2D2940091C91C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1019B32AB2D2940091C91C /* ArrayExtension.swift */; };
@@ -75,6 +76,7 @@
 		25C1E60F2C0C43B400632AB2 /* OrderTrackingViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingViewInteractor.swift; sourceTree = "<group>"; };
 		25C1E6112C0C481000632AB2 /* OrderCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewModel.swift; sourceTree = "<group>"; };
 		25C1E6132C0C481A00632AB2 /* OrderCompletionViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewInteractor.swift; sourceTree = "<group>"; };
+		25C1E6162C0C591C00632AB2 /* SSO.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SSO.storyboard; sourceTree = "<group>"; };
 		C355C4962AD10837002F0705 /* FCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstants.swift; sourceTree = "<group>"; };
 		FE10192B2AB13F270091C91C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		FE1019B32AB2D2940091C91C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 			name = Directions;
 			sourceTree = "<group>";
 		};
+		25C1E6152C0C58FF00632AB2 /* SSO */ = {
+			isa = PBXGroup;
+			children = (
+				25C1E6162C0C591C00632AB2 /* SSO.storyboard */,
+			);
+			path = SSO;
+			sourceTree = "<group>";
+		};
 		FE1019752AB144250091C91C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +208,7 @@
 				FE19AF152AA9576C00FE09A8 /* Domain */,
 				FE19AF272AAAC61700FE09A8 /* Intermidiate */,
 				FE19AF0B2AA9555000FE09A8 /* Presentaion */,
+				25C1E6152C0C58FF00632AB2 /* SSO */,
 				FE19AF002AA6C0EF00FE09A8 /* Assets.xcassets */,
 				FE19AF022AA6C0EF00FE09A8 /* LaunchScreen.storyboard */,
 				FE19AF052AA6C0EF00FE09A8 /* Info.plist */,
@@ -379,6 +390,7 @@
 			files = (
 				FE19AF042AA6C0EF00FE09A8 /* LaunchScreen.storyboard in Resources */,
 				FE19AF012AA6C0EF00FE09A8 /* Assets.xcassets in Resources */,
+				25C1E6172C0C591C00632AB2 /* SSO.storyboard in Resources */,
 				FE19AEFF2AA6C0EE00FE09A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
