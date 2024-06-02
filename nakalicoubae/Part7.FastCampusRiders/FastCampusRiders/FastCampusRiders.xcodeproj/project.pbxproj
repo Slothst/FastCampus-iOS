@@ -25,6 +25,11 @@
 		25C1E6122C0C481000632AB2 /* OrderCompletionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6112C0C481000632AB2 /* OrderCompletionViewModel.swift */; };
 		25C1E6142C0C481A00632AB2 /* OrderCompletionViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6132C0C481A00632AB2 /* OrderCompletionViewInteractor.swift */; };
 		25C1E6172C0C591C00632AB2 /* SSO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C1E6162C0C591C00632AB2 /* SSO.storyboard */; };
+		25C1E61A2C0C5D1000632AB2 /* IssueTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6192C0C5D1000632AB2 /* IssueTokenInfo.swift */; };
+		25C1E61C2C0C5D8600632AB2 /* RefreshTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E61B2C0C5D8600632AB2 /* RefreshTokenInfo.swift */; };
+		25C1E61E2C0C5DDA00632AB2 /* SSOUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E61D2C0C5DDA00632AB2 /* SSOUserInfo.swift */; };
+		25C1E6202C0C5E3400632AB2 /* SSOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E61F2C0C5E3400632AB2 /* SSOController.swift */; };
+		25C1E6232C0C5F0300632AB2 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 25C1E6222C0C5F0300632AB2 /* KeychainAccess */; };
 		C355C4972AD10837002F0705 /* FCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355C4962AD10837002F0705 /* FCConstants.swift */; };
 		FE10192C2AB13F270091C91C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10192B2AB13F270091C91C /* APIController.swift */; };
 		FE1019B42AB2D2940091C91C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1019B32AB2D2940091C91C /* ArrayExtension.swift */; };
@@ -77,6 +82,10 @@
 		25C1E6112C0C481000632AB2 /* OrderCompletionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewModel.swift; sourceTree = "<group>"; };
 		25C1E6132C0C481A00632AB2 /* OrderCompletionViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompletionViewInteractor.swift; sourceTree = "<group>"; };
 		25C1E6162C0C591C00632AB2 /* SSO.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SSO.storyboard; sourceTree = "<group>"; };
+		25C1E6192C0C5D1000632AB2 /* IssueTokenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTokenInfo.swift; sourceTree = "<group>"; };
+		25C1E61B2C0C5D8600632AB2 /* RefreshTokenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenInfo.swift; sourceTree = "<group>"; };
+		25C1E61D2C0C5DDA00632AB2 /* SSOUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOUserInfo.swift; sourceTree = "<group>"; };
+		25C1E61F2C0C5E3400632AB2 /* SSOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOController.swift; sourceTree = "<group>"; };
 		C355C4962AD10837002F0705 /* FCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstants.swift; sourceTree = "<group>"; };
 		FE10192B2AB13F270091C91C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		FE1019B32AB2D2940091C91C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -116,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25C1E6232C0C5F0300632AB2 /* KeychainAccess in Frameworks */,
 				FEE527322AC5A53F00BC682F /* MBAkit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,9 +166,21 @@
 		25C1E6152C0C58FF00632AB2 /* SSO */ = {
 			isa = PBXGroup;
 			children = (
+				25C1E6182C0C5D0300632AB2 /* Entity */,
+				25C1E61F2C0C5E3400632AB2 /* SSOController.swift */,
 				25C1E6162C0C591C00632AB2 /* SSO.storyboard */,
 			);
 			path = SSO;
+			sourceTree = "<group>";
+		};
+		25C1E6182C0C5D0300632AB2 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				25C1E6192C0C5D1000632AB2 /* IssueTokenInfo.swift */,
+				25C1E61B2C0C5D8600632AB2 /* RefreshTokenInfo.swift */,
+				25C1E61D2C0C5DDA00632AB2 /* SSOUserInfo.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		FE1019752AB144250091C91C /* Frameworks */ = {
@@ -342,6 +364,7 @@
 			name = FastCampusRiders;
 			packageProductDependencies = (
 				FEE527312AC5A53F00BC682F /* MBAkit */,
+				25C1E6222C0C5F0300632AB2 /* KeychainAccess */,
 			);
 			productName = FastCampusRiders;
 			productReference = FE19AEF42AA6C0EE00FE09A8 /* FastCampusRiders.app */;
@@ -373,6 +396,7 @@
 			mainGroup = FE19AEEB2AA6C0EE00FE09A8;
 			packageReferences = (
 				FEE527302AC5A53F00BC682F /* XCRemoteSwiftPackageReference "MBA-kit" */,
+				25C1E6212C0C5F0300632AB2 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = FE19AEF52AA6C0EE00FE09A8 /* Products */;
 			projectDirPath = "";
@@ -407,6 +431,7 @@
 				FED5A4812AC2C5150050F24D /* OrderCompletionViewController.swift in Sources */,
 				FED5A4772AC26CF40050F24D /* OrderDetailMemoCell.swift in Sources */,
 				25C1E6042C09B8D500632AB2 /* MapManager.swift in Sources */,
+				25C1E61C2C0C5D8600632AB2 /* RefreshTokenInfo.swift in Sources */,
 				FED5A4732AC262C30050F24D /* OrderDetailContactCell.swift in Sources */,
 				FE19AF292AAAC63000FE09A8 /* FCStackView.swift in Sources */,
 				FE9AD8142ABD67B900535B47 /* ControlExtension.swift in Sources */,
@@ -414,10 +439,12 @@
 				FED5A4712AC25FD20050F24D /* OrderDetailTitleCell.swift in Sources */,
 				FED5A47F2AC2BEA80050F24D /* OrderListTableViewCell.swift in Sources */,
 				25C1E6122C0C481000632AB2 /* OrderCompletionViewModel.swift in Sources */,
+				25C1E61A2C0C5D1000632AB2 /* IssueTokenInfo.swift in Sources */,
 				25C1E6102C0C43B400632AB2 /* OrderTrackingViewInteractor.swift in Sources */,
 				FE9AD8102ABD4E5300535B47 /* OrderDetailDescriptionCell.swift in Sources */,
 				25C1E5F12C08BDFC00632AB2 /* OrderListViewInteractor.swift in Sources */,
 				25C1E6082C09BBCD00632AB2 /* MapGoogleDirections.swift in Sources */,
+				25C1E61E2C0C5DDA00632AB2 /* SSOUserInfo.swift in Sources */,
 				FED5A4792AC282A00050F24D /* OrderDetailReceiptCell.swift in Sources */,
 				25C1E5EF2C08BD4F00632AB2 /* OrderListViewModel.swift in Sources */,
 				25C1E6062C09B9D200632AB2 /* MapAppleDirections.swift in Sources */,
@@ -438,6 +465,7 @@
 				FE10192C2AB13F270091C91C /* APIController.swift in Sources */,
 				25C1E60A2C09BC8100632AB2 /* MapKakaoDirections.swift in Sources */,
 				FE1019C72AB3F63E0091C91C /* ViewExtension.swift in Sources */,
+				25C1E6202C0C5E3400632AB2 /* SSOController.swift in Sources */,
 				25C1E5F62C098C9600632AB2 /* InProgressOrderListDelegate.swift in Sources */,
 				25C1E5FF2C0998F600632AB2 /* OrderDetailViewDelegate.swift in Sources */,
 				25C1E6142C0C481A00632AB2 /* OrderCompletionViewInteractor.swift in Sources */,
@@ -673,6 +701,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		25C1E6212C0C5F0300632AB2 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
 		FEE527302AC5A53F00BC682F /* XCRemoteSwiftPackageReference "MBA-kit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MBKwon/MBA-kit.git";
@@ -684,6 +720,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		25C1E6222C0C5F0300632AB2 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25C1E6212C0C5F0300632AB2 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
 		FEE527312AC5A53F00BC682F /* MBAkit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FEE527302AC5A53F00BC682F /* XCRemoteSwiftPackageReference "MBA-kit" */;

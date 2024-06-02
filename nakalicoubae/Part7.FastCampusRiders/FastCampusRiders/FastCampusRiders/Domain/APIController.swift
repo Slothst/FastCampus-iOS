@@ -21,12 +21,22 @@ extension APIController {
         case orderDetail(orderID: String)
         case orderList
         
+        case issueToken(appID: String, secret: String, id: String, password: String)
+        case refreshToken(appID: String, secret: String, refreshToken: String)
+        case readUserInfo(appID: String, secret: String, accessToken: String)
+        
         var pathString: String {
             switch self {
             case .orderDetail(let orderID):
                 return "/order_info_v6/\(orderID)"
             case .orderList:
                 return "/order_info_v6"
+            case .issueToken(let appID, let secret,let id, let password):
+                return "/issue_token"
+            case .refreshToken(let appID, let secret, let refreshToken):
+                return "/refresh_token"
+            case .readUserInfo(let appID, let secret, let accessToken):
+                return "/user_info"
             }
         }
         
@@ -35,6 +45,12 @@ extension APIController {
             case .orderDetail:
                 return nil
             case .orderList:
+                return nil
+            case .issueToken(let appID, let secret, let id, let password):
+                return nil
+            case .refreshToken(let appID, let secret, let refreshToken):
+                return nil
+            case .readUserInfo(let appID, let secret, let accessToken):
                 return nil
             }
         }
