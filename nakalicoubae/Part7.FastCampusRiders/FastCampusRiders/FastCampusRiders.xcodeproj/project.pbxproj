@@ -20,6 +20,8 @@
 		25C1E6082C09BBCD00632AB2 /* MapGoogleDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6072C09BBCD00632AB2 /* MapGoogleDirections.swift */; };
 		25C1E60A2C09BC8100632AB2 /* MapKakaoDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E6092C09BC8100632AB2 /* MapKakaoDirections.swift */; };
 		25C1E60C2C09BCCF00632AB2 /* MapNaverDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E60B2C09BCCF00632AB2 /* MapNaverDirections.swift */; };
+		25C1E60E2C0C411600632AB2 /* OrderTrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E60D2C0C411600632AB2 /* OrderTrackingViewModel.swift */; };
+		25C1E6102C0C43B400632AB2 /* OrderTrackingViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C1E60F2C0C43B400632AB2 /* OrderTrackingViewInteractor.swift */; };
 		C355C4972AD10837002F0705 /* FCConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355C4962AD10837002F0705 /* FCConstants.swift */; };
 		FE10192C2AB13F270091C91C /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE10192B2AB13F270091C91C /* APIController.swift */; };
 		FE1019B42AB2D2940091C91C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1019B32AB2D2940091C91C /* ArrayExtension.swift */; };
@@ -67,6 +69,8 @@
 		25C1E6072C09BBCD00632AB2 /* MapGoogleDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapGoogleDirections.swift; sourceTree = "<group>"; };
 		25C1E6092C09BC8100632AB2 /* MapKakaoDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKakaoDirections.swift; sourceTree = "<group>"; };
 		25C1E60B2C09BCCF00632AB2 /* MapNaverDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNaverDirections.swift; sourceTree = "<group>"; };
+		25C1E60D2C0C411600632AB2 /* OrderTrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingViewModel.swift; sourceTree = "<group>"; };
+		25C1E60F2C0C43B400632AB2 /* OrderTrackingViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingViewInteractor.swift; sourceTree = "<group>"; };
 		C355C4962AD10837002F0705 /* FCConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstants.swift; sourceTree = "<group>"; };
 		FE10192B2AB13F270091C91C /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		FE1019B32AB2D2940091C91C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
@@ -297,6 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				FEE527802AC91DA400BC682F /* OrderTrackingViewController.swift */,
+				25C1E60D2C0C411600632AB2 /* OrderTrackingViewModel.swift */,
+				25C1E60F2C0C43B400632AB2 /* OrderTrackingViewInteractor.swift */,
 			);
 			name = OrderTracking;
 			sourceTree = "<group>";
@@ -389,6 +395,7 @@
 				FED5A46F2AC17FD30050F24D /* ItemDetailInfo.swift in Sources */,
 				FED5A4712AC25FD20050F24D /* OrderDetailTitleCell.swift in Sources */,
 				FED5A47F2AC2BEA80050F24D /* OrderListTableViewCell.swift in Sources */,
+				25C1E6102C0C43B400632AB2 /* OrderTrackingViewInteractor.swift in Sources */,
 				FE9AD8102ABD4E5300535B47 /* OrderDetailDescriptionCell.swift in Sources */,
 				25C1E5F12C08BDFC00632AB2 /* OrderListViewInteractor.swift in Sources */,
 				25C1E6082C09BBCD00632AB2 /* MapGoogleDirections.swift in Sources */,
@@ -402,6 +409,7 @@
 				FEE5277F2AC6A8FF00BC682F /* PhotoManager.swift in Sources */,
 				FED5A4752AC263F20050F24D /* LocationDetailInfo.swift in Sources */,
 				FE19AF1C2AA9578E00FE09A8 /* LocationManager.swift in Sources */,
+				25C1E60E2C0C411600632AB2 /* OrderTrackingViewModel.swift in Sources */,
 				FE19AEF82AA6C0EE00FE09A8 /* AppDelegate.swift in Sources */,
 				25C1E60C2C09BCCF00632AB2 /* MapNaverDirections.swift in Sources */,
 				FE1019CB2AB3FB370091C91C /* OrderDetailViewController.swift in Sources */,
