@@ -33,6 +33,7 @@ class InProgressOrderListDelegate: NSObject, OrderListDelegate {
 }
 
 extension InProgressOrderListDelegate: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataList.count
     }
@@ -52,6 +53,7 @@ extension InProgressOrderListDelegate: UITableViewDataSource {
 }
 
 extension InProgressOrderListDelegate: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let viewController = self.viewController,
               let dataInfo = self.dataList[safe: indexPath.row] else { return }

@@ -10,6 +10,7 @@ import MBAkit
 import UIKit
 
 class OrderListViewModel: ViewModelConfigurable {
+    
     typealias VC = OrderListViewController
     
     var outputSubject = PassthroughSubject<Result<VC.O, Error>, Never>()
@@ -23,6 +24,7 @@ class OrderListViewModel: ViewModelConfigurable {
 }
 
 extension OrderListViewModel {
+    
     private func getOrderList() {
         Task {
             await APIController.shared

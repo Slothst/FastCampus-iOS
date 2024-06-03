@@ -10,6 +10,7 @@ import MapKit
 import UIKit
 
 class MapAppleDirections: DirectionsAvailable {
+    
     static var canOpen: Bool {
         if let mapURL = URL(string: "maps://") {
             return UIApplication.shared.canOpenURL(mapURL)
@@ -23,6 +24,7 @@ class MapAppleDirections: DirectionsAvailable {
     }
     
     func openAppToGetDirections(with coordinates: CLLocationCoordinate2D, name: String?) {
+        
         let regionDistance: CLLocationDistance = 10_000
         let regionSpan = MKCoordinateRegion(
             center: coordinates,

@@ -86,6 +86,7 @@ extension OrderListViewController {
 }
 
 extension OrderListViewController: ViewControllerConfigurable {
+    
     typealias VM = OrderListViewModel
     
     typealias I = OrderListInput
@@ -100,6 +101,7 @@ extension OrderListViewController: ViewControllerConfigurable {
 }
 
 extension OrderListViewController: ViewContollerInteractable {
+    
     typealias VI = OrderListViewInteractor
     
     typealias IM = OrderListIM

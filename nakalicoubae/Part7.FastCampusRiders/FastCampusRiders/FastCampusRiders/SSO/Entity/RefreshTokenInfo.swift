@@ -8,6 +8,7 @@
 import Foundation
 
 struct RefreshTokenInfo: Decodable {
+    
     let accessToken: String
     let expirationTime: TimeInterval
     

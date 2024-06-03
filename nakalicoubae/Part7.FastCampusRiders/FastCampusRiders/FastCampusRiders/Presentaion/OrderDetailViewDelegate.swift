@@ -144,6 +144,7 @@ extension OrderDetailViewDelegate: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cellType = self.detailInfoList[indexPath.section]
         switch cellType {
         case .map(let detailInfo, let routes):

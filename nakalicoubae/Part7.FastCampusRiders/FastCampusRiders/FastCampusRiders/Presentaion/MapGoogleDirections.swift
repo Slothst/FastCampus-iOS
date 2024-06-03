@@ -9,6 +9,7 @@ import CoreLocation
 import UIKit
 
 class MapGoogleDirections: DirectionsAvailable {
+    
     static var canOpen: Bool {
         if let mapURL = URL(string: "comgooglemaps://") {
             return UIApplication.shared.canOpenURL(mapURL)
@@ -22,6 +23,7 @@ class MapGoogleDirections: DirectionsAvailable {
     }
     
     func openAppToGetDirections(with coordinates: CLLocationCoordinate2D, name: String?) {
+        
         let urlString = "comgooglemapsurl://maps.google.com/?q=@\(coordinates.latitude),\(coordinates.longitude)"
         guard let mapURL = URL(string: urlString) else { return }
         UIApplication.shared.open(mapURL)

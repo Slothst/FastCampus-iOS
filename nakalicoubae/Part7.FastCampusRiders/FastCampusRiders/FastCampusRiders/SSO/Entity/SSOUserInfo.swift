@@ -8,6 +8,7 @@
 import Foundation
 
 struct SSOUserInfo: Decodable {
+    
     let userID: String
     let riderName: String
     

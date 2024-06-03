@@ -9,15 +9,18 @@ import CoreLocation
 import Foundation
 
 protocol DirectionsAvailable {
+    
     static var canOpen: Bool { get }
     var appName: String { get }
     func openAppToGetDirections(with coordinates: CLLocationCoordinate2D, name: String?)
 }
 
 enum MapManager: CaseIterable {
+    
     case apple, google, kakao, naver
     
     static func getMapApps() -> [DirectionsAvailable] {
+        
         var mapAppList: [DirectionsAvailable] = []
         
         for target in MapManager.allCases {

@@ -9,6 +9,7 @@ import Foundation
 import KeychainAccess
 
 class SSOController {
+    
     static let shared = SSOController()
     
     enum SSOStatus {
@@ -63,6 +64,7 @@ class SSOController {
 
 // MARK: - public methods
 extension SSOController {
+    
     func checkUserInfo() async -> Result<SSOStatus, Error> {
         guard let userName = self.keychain[SSOKeychainKey.userName.rawValue],
               let password = self.keychain[SSOKeychainKey.password.rawValue] else {
@@ -91,6 +93,7 @@ extension SSOController {
 
 // MARK: - private methods
 extension SSOController {
+    
     private func validateToken(_ status: SSOStatus) -> Result<SSOStatus, Error> {
         if case .startAuth(let id, let password) = status {
             return .success(.requestToken(id: id, password: password))
@@ -114,6 +117,7 @@ extension SSOController {
     }
     
     private func requestToken(_ status: SSOStatus) async -> Result<SSOStatus, Error> {
+        
         guard case .requestToken(let id, let password) = status else {
             return .success(status)
         }
@@ -148,6 +152,7 @@ extension SSOController {
     }
     
     private func refreshToken(_ status: SSOStatus) async -> Result<SSOStatus, Error> {
+        
         guard case .refreshAccessToken(let refreshToken) = status else {
             return .success(status)
         }
@@ -181,6 +186,7 @@ extension SSOController {
     }
     
     private func requestUserInfo(_ status: SSOStatus) async -> Result<SSOStatus, Error> {
+        
         guard case .requestUserInfo(let accessToken) = status else {
             return .success(status)
         }
@@ -215,6 +221,7 @@ extension SSOController {
 
 // MARK: - extension for result
 extension Result where Success == SSOController.SSOStatus {
+    
     func flatMap(_ transform: (Success) -> Self) -> Self {
         switch self {
         case .success(let status):

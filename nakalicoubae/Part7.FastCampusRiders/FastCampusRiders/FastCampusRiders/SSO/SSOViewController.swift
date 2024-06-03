@@ -8,6 +8,7 @@
 import UIKit
 
 class SSOViewController: UIViewController {
+    
     @IBOutlet private weak var userNameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var ssoButton: UIButton!
@@ -27,6 +28,7 @@ class SSOViewController: UIViewController {
 }
 
 extension SSOViewController {
+    
     private func checkAuthSession() {
         Task { @MainActor in
             let result = await SSOController.shared.checkUserInfo()
@@ -62,6 +64,7 @@ extension SSOViewController {
 }
 
 extension SSOViewController {
+    
     private func callAuthApp() {
         guard let appscheme = URL(string: self.ssoAppScheme) else { return }
         UIApplication.shared.open(appscheme)

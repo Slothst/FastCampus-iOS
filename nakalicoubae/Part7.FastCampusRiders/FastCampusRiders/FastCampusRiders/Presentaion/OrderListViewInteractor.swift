@@ -9,6 +9,7 @@ import MBAkit
 import UIKit
 
 protocol OrderListDelegate: UITableViewDataSource {
+    
     var dataList: [OrderDetailInfo] { get }
     var viewController: OrderListViewController? { get }
     var scrollDelegate: ((UIScrollView) -> Void)? { set get }
@@ -32,6 +33,7 @@ class OrderListViewInteractor {
 }
 
 extension OrderListViewInteractor: ViewInteractorConfigurable {
+    
     typealias VC = OrderListViewController
     
     func handleMessage(_ interactionMessage: VC.IM) {
@@ -75,6 +77,7 @@ extension OrderListViewInteractor {
 }
 
 extension OrderListViewInteractor {
+    
     private func startUpdatingTimeSensitiveUI() {
         guard self.timer == nil else { return }
         self.timer = Timer.scheduledTimer(withTimeInterval: 5.0,
