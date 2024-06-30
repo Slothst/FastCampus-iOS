@@ -47,10 +47,12 @@ extension ViewController {
 
 extension ViewController {
     @IBAction private func touchTestButton() {
-        for i in 0...10_000_000 {
-            autoreleasepool {
-                let string = "\(i)"
-                self.timeLabel.text = string
+        autoreleasepool {
+            for i in 0...10_000_000 {
+                autoreleasepool {
+                    let string = "\(i)"
+                    self.timeLabel.text = string
+                }
             }
         }
     }
