@@ -10,6 +10,7 @@ import Foundation
 import MBAkit
 
 class OrderCompletionViewModel: ViewModelConfigurable {
+    
     typealias VC = OrderCompletionViewController
     
     var outputSubject = PassthroughSubject<Result<VC.O, Error>, Never>()
