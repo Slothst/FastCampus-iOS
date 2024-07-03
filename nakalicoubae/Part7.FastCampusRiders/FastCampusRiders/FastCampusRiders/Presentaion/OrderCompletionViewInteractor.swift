@@ -10,6 +10,7 @@ import MBAkit
 import UIKit
 
 class OrderCompletionViewInteractor: ViewInteractorConfigurable {
+    
     typealias VC = OrderCompletionViewController
     
     private var photoManager: PhotoManager?
