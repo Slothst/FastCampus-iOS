@@ -30,6 +30,7 @@ class OrderCompletionViewController: UIViewController {
 }
 
 extension OrderCompletionViewController {
+    
     func set(orderID: String) {
         self.orderID = orderID
     }
@@ -49,6 +50,7 @@ extension OrderCompletionViewController {
 }
 
 extension OrderCompletionViewController: ViewControllerConfigurable {
+    
     typealias VM = OrderCompletionViewModel
     
     typealias I = OrderCompletionInputMessage
@@ -63,6 +65,7 @@ extension OrderCompletionViewController: ViewControllerConfigurable {
 }
 
 extension OrderCompletionViewController: ViewContollerInteractable {
+    
     typealias VI = OrderCompletionViewInteractor
     
     typealias IM = OrderCompletionInteractionMessage
