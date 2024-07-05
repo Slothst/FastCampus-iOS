@@ -11,6 +11,7 @@ import MBAkit
 import UIKit
 
 class OrderTrackingViewInteractor: ViewInteractorConfigurable {
+    
     typealias VC = OrderTrackingViewController
     private lazy var mapViewDelegate = TrackingMapViewDelegate()
     
@@ -42,10 +43,12 @@ class OrderTrackingViewInteractor: ViewInteractorConfigurable {
 }
 
 private class TrackingMapViewDelegate: NSObject {
+    
     private let userAnnotationViewID = "userAnnotationViewID"
 }
 
 extension TrackingMapViewDelegate: MKMapViewDelegate {
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
         if annotation is RiderAnnotation {
             return riderAnnotationView(
@@ -59,6 +62,7 @@ extension TrackingMapViewDelegate: MKMapViewDelegate {
 }
 
 private class RiderAnnotation: NSObject, MKAnnotation {
+    
     private(set) var coordinate: CLLocationCoordinate2D
     private(set) var heading: CLHeading?
     
@@ -69,6 +73,7 @@ private class RiderAnnotation: NSObject, MKAnnotation {
 }
 
 private class riderAnnotationView: MKAnnotationView {
+    
     override init(annotation: (any MKAnnotation)?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         self.image = UIImage(named: "icon_rider_location")
