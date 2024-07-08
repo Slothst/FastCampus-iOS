@@ -10,6 +10,7 @@ import Foundation
 import MBAkit
 
 class OrderTrackingViewModel: ViewModelConfigurable {
+    
     typealias VC = OrderTrackingViewController
     
     private(set) var outputSubject = PassthroughSubject<Result<VC.O, Error>, Never>()
